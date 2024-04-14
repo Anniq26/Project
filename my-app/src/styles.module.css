@@ -17,6 +17,7 @@
     padding: 32px 108px 32px 108px;
     gap: 516px;
     background: #FFFFB2;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
   }
 
   .linksstyle {
@@ -25,6 +26,13 @@
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+  }
+  .link:focus {
+    border-bottom: 4px solid rgba(0, 0, 0, 1); 
+  }
+
+  .link:not(:focus) {
+    border-bottom: none;
   }
 
   .link,
@@ -40,10 +48,123 @@
 
   }
 
+
+
+/* main page */
   .mainpagediv{
     display: flex;
-    width: 1440px;
-    height: 100vh;
+    flex-direction: column;
+    width: Fixed (1,440px)px;
+    height: auto;
+  }
+/* MainPage section  first */
+.sectionfirst {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 144px 93.66px 62px 146.43px;
+  width: 100%;
+  height: Hug (559px)px;
+  top: 116px;
+  gap: 129px;
+  opacity: 0px;
+  background-color: #FFFFB2;
+  }
+
+  .firstsecbag{
+    width: 240px;
+    height: 403px;
+    top: 0.34px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .firstsecitems{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    flex-wrap: wrap;
+    
+  }
+
+  .firsttitle{
+    font-family: Helvetica;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+  }
+
+  /* second section */
+  .secondtitle{
+    width: Fixed (1,440px)px;
+    height: Fixed (104px)px;
+    top: 675px;
+    padding: 32px 108px 32px 108px;
+
+  }
+
+  .sectwoitems {
+    display: flex;
+    flex-direction: row;
+    width: Fixed (1,440px)px;
+    height: Hug (672px)px;
+    top: 779px;
+    padding: 16px 108px ;
+    gap: 24px;
+    justify-content: center;
+    opacity: 0px;
+    background-color: #FFFF87;  
+  }
+
+  .card{
+    border-radius: 20px;
+    /* padding: 10px, 21px, 10px, 21px; */
+    background-color: #fff;
+    height: 640px;
+    width: 392px;
+    gap: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+  }
+  .cardtext{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 21px ;
+    cursor: pointer;
+
+  }
+  h3, 
+  .itemprice{
+  font-family: Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  color: #2B2B2B;
+  cursor: pointer;
+  }
+  h4,
+  .itemsize{
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #2B2B2B;
+    cursor: pointer;
+  }
+  .itemimage{
+    width: 330px;
+    height: 392px;
+    justify-content: center;
+    cursor: pointer;
   }
 
   /* Footer */
