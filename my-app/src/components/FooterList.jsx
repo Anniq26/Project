@@ -8,7 +8,8 @@ import styles from '../styles.module.css';
 
 
 const FooterItems = [
-{id:1, title:'+995 574 085 413', image: phoneImg},
+{id:1, title:'+995 574 085 413', 
+image: phoneImg},
 {id:2, title:'Qina@gmail.com', image: mailImg}
 ];
 

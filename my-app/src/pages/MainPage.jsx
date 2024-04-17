@@ -5,15 +5,16 @@ import imgVector from '../style/sectiononeimg.webp';
 import imgBag from '../style/sectiononebag.webp';
 // import MainPageItems from "../components/MainPageItems";
 import MainPageItemscopy from "../components/MainPageItemscopy";
+import SimpleBagDisplay from "../components/SimpleBagDisplay";  // Ensure this is imported
 
-const  MainPage = () => {
+const MainPage = () => {
     return (
         <div className={styles.mainpagediv}>
             {/* section first */}
             <div className={styles.sectionfirst}>
                 <div className={styles.firstsecitems}>
                     <div className={styles.titleone}>
-                        <h2 className={styles.firsttitle}>ხელნაკეთი ჩანთების </h2>
+                        <h2 className={styles.firsttitle}>ხელნაკეთი ჩანთების</h2>
                         <h2 className={styles.firsttitle}>მრავალფეროვანი არჩევანი!</h2>
                     </div>
                     <img className={styles.imgVector} src={imgVector} alt="img" />
@@ -23,19 +24,19 @@ const  MainPage = () => {
 
             {/* section second */}
             <div className={styles.sectionsecond}>
-                <h2 className={styles.secondtitle}>პოპულარული  ჩანთები</h2>
+                <h2 className={styles.secondtitle}>პოპულარული ჩანთები</h2>
                 <div className={styles.sectwoitems}>
-                    <MainPageItemscopy/>
+                    <MainPageItemscopy />
                 </div>
             </div>
 
-            {/* third section */}
+            {/* third section - Simplified Bag Display */}
             <div className={styles.sectionsecond}>
                 <h2 className={styles.secondtitle}>ჩანთები</h2>
+                <SimpleBagDisplay />
             </div>
-
         </div>
-    )
+    );
 }
 
-export default MainPage
+export default MainPage;
