@@ -10,7 +10,7 @@ const SimpleBagDisplay = () => {
         { id: 2, image: imgBagtwo, title: "მოქარგული ჩანთა", secondary_title: '"ყვავილები"' },
         { id: 3, image: imgBagthree, title: "მოქარგული ჩანთა", secondary_title: '"ყვავილები"' },
         { id: 4, image: imgBagone, title: "მოხატული ჩანთა", secondary_title: '"ფუტკრები"' },
-        { id: 5, image: imgBagtwo, title: "სპორტული ჩანთა", secondary_title: '"გვირილები"' },
+        { id: 5, image: imgBagtwo, title: "მოხატული ჩანთა", secondary_title: '"გვირილები"' },
         { id: 6, image: imgBagthree, title: "მოხატული ჩანთა", secondary_title: '"ყვავილები და გოგონა"' },
         { id: 7, image: imgBagone, title: "მოხატული ჩანთა", secondary_title: '"გოგონა და ფისო"' },
         { id: 8, image: imgBagtwo, title: "მოხატული ჩანთა", secondary_title: '"წამიყვანე შენთან ერთად"' }
