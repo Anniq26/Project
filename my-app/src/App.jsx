@@ -8,7 +8,6 @@ function App() {
   return (
     <div className={styles.App}>
       <RouterProvider router = {createBrowserRouter(router)} />
-      
     </div>
   )
 }
