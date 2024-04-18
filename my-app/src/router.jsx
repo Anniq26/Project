@@ -5,6 +5,10 @@ import { Link, Route, Routes } from "react-router-dom";
 import CollectionsPage from "./pages/CollectionsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
+import OffersPage from "./pages/OffersPage";
+import MadeByUPage from "./pages/MadeByUPage";
+
+
 
 const router = [
    
@@ -31,7 +35,17 @@ const router = [
             {
                 element:<ContactPage/>,
                 path:'/contact'
+            },
+            {
+                element:<OffersPage/>,
+                path:'/offers'
+            },
+            {
+                element:<MadeByUPage/>,
+                path:'/madebyu'
             }
+            
+
         ]
     }
 ]

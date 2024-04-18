@@ -7,6 +7,20 @@ import imgBag from '../style/sectiononebag.webp';
 import MainPageItemscopy from "../components/MainPageItemscopy";
 import SimpleBagDisplay from "../components/SimpleBagDisplay";  // Ensure this is imported
 
+
+
+const FirstTitle = [
+    {id:1, text:'ხელნაკეთი ჩანთების'},
+    {id:2, text:'მრავალფეროვანი არჩევანი'}
+]
+const SecondTitle = [
+    {id:1, text:'შეუკვეთე შენთვის სასურველი ფორმის, ზომის და ფერის ჩანთა'},
+    {id:2, text:'ჩვენ მას გამოგიგზავნით ნებისმიერ ადგილას'}
+]
+
+
+
+
 const MainPage = () => {
     return (
         <div className={styles.mainpagediv}>
@@ -14,17 +28,26 @@ const MainPage = () => {
             <div className={styles.sectionfirst}>
                 <div className={styles.firstsecitems}>
                     <div className={styles.titleone}>
-                        <h2 className={styles.firsttitle}>ხელნაკეთი ჩანთების</h2>
-                        <h2 className={styles.firsttitle}>მრავალფეროვანი არჩევანი!</h2>
+                        {FirstTitle.map(item => (
+                        <div key={item.id}>
+                        <h2  className={styles.seconefirsttitle}>{item.text}</h2>
+                        </div>
+                        ))}
                     </div>
-                    <img className={styles.imgVector} src={imgVector} alt="img" />
+                <div className={styles.titletwo}>
+                    {SecondTitle.map(item => (
+                        <div key={item.id}>
+                        <h2  className={styles.seconetwotitle}>{item.text}</h2>
+                        </div>
+                    ))}
                 </div>
-                <img className={styles.firstsecbag} src={imgBag} alt="ჩანთა" />
             </div>
+                
+        </div>
 
             {/* section second */}
             <div className={styles.sectionsecond}>
-                <h2 className={styles.secondtitle}>პოპულარული ჩანთები</h2>
+                <h2 className={styles.secondtitle}>ქინას პოპულარული ჩანთები</h2>
                 <div className={styles.sectwoitems}>
                     <MainPageItemscopy />
                 </div>
