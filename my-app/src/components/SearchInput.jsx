@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles.module.css';
-import imgSearch from '../style/search.webp'; // Ensure this path matches where your image is stored
+import imgSearch from '../style/search.webp';
 
 const SearchInput = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +11,6 @@ const SearchInput = () => {
 
     const handleSearchSubmit = (event) => {
         event.preventDefault();
-        // Implement your search logic or a callback here
         alert('Search for: ' + searchTerm);
     };
 

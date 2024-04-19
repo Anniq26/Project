@@ -4,8 +4,8 @@ import styles from '../styles.module.css';
 import FooterList from "../components/FooterList";
 import imgLogo from '../style/logo.webp';
 import ChangeLanguage from "../components/ChangeLanguage";
-import HeaderFrame from "../components/HeaderFrame"; // Make sure this is correctly imported
-import SearchInput from '../components/SearchInput'; // Import the Search Component
+import HeaderFrame from "../components/HeaderFrame"; 
+import SearchInput from '../components/SearchInput'; 
 
 const LinkLayout = () => {
     return (
