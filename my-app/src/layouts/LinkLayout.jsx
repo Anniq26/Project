@@ -22,8 +22,12 @@ const LinkLayout = () => {
                     <Link className={styles.link} to={'/aboutus'}>ჩვენ შესახებ</Link>
                 </div>
                 <ChangeLanguage />
+                
+                <div >
+                <SearchInput />  
+                </div>
             </div>
-            <SearchInput />  
+         
             <Outlet/>
             <FooterList/>
         </div>

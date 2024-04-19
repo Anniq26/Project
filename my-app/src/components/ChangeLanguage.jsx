@@ -12,13 +12,12 @@ const ChangeLanguage = () => {
 
   return (
     <div className={styles.ChangeLanguage}>
-      <p>{language === 'georgian' ? 'ქართული' : 'English'}</p>
       <img
         src={language === 'georgian' ? georgianIcon : englishIcon}
         alt={language === 'georgian' ? 'Georgian' : 'English'}
         onClick={() => handleChangeLanguage(language === 'georgian' ? 'english' : 'georgian')}
       />
-      
+      <p>{language === 'georgian' ? 'ქართული' : 'English'}</p>
     </div>
   );
 };
