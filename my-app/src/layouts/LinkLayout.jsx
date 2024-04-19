@@ -23,7 +23,7 @@ const LinkLayout = () => {
                 </div>
                 <ChangeLanguage />
             </div>
-            <SearchInput />  {/* Include the SearchInput component here */}
+            <SearchInput />  
             <Outlet/>
             <FooterList/>
         </div>
