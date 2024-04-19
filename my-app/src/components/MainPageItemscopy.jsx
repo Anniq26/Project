@@ -8,40 +8,47 @@ const items = [
         {
           id: 1,
           image: imgBagone,
-          title: "მოხატული ჩანთა",
-          secondary_title: '"პატარა პრინცი"',
+          secondary_title: 'პატარა პრინცი',
           size: "27x30 სმ",
           price: "30 ₾"
         },
         {
           id: 2,
           image: imgBagtwo,
-          title: "მოქარგული ჩანთა",
-          secondary_title: '"ყვავილები"',
+          secondary_title: 'ყვავილები',
           size: "27x30 სმ",
           price: "35 ₾"
         },
         {
             id: 3,
             image: imgBagthree,
-            title: "მოქარგული ჩანთა",
-            secondary_title: '"ყვავილები"',
+            secondary_title: 'ყვავილები',
             size: "34x35 სმ",
             price: "35 ₾"
-          }
+          },
+          {
+          id: 4,
+          image: imgBagthree,
+          
+          secondary_title: 'ყვავილები',
+          size: "34x35 სმ",
+          price: "35 ₾"
+        },
+        
 ]
+
 const MainPageItemscopy = () => {
 
   return (
-    <div className={styles.sectwoitems}>
+    <div className={styles.flexContainer}>
         {items.map(item => (
-            <div className={styles.card} key={item.id}>
-                <img className={styles.itemimage} src={item.image} alt='img' />
-                <div className={styles.cardtext}>
+            <div className={styles.cardd} key={item.id}>
+                <img className={styles.itemimages} src={item.image} alt='img' />
+                <div className={styles.cardtexts}>
                     <h3>{item.title}</h3>
                     <h4>{item.secondary_title}</h4>
-                    <p className={styles.itemsize}>{item.size}</p>
-                    <p className={styles.itemprice}>{item.price}</p>
+                    
+                   
                 </div>
             </div>
         ))}

@@ -3,11 +3,21 @@ import styles from '../styles.module.css';
 import { Link, NavLink } from "react-router-dom";
 import imgVector from '../style/sectiononeimg.webp';
 import imgBag from '../style/sectiononebag.webp';
-// import MainPageItems from "../components/MainPageItems";
+import imgBagone from '../style/bagone.webp';
+import imgBagtwo from '../style/bagtwo.webp';
+import imgBagthree from '../style/bagthree.webp';
 import MainPageItemscopy from "../components/MainPageItemscopy";
-import SimpleBagDisplay from "../components/SimpleBagDisplay";  // Ensure this is imported
 
 
+const items0=[
+    {
+    id: 1,
+    image: imgBagone,
+    secondary_title: 'პატარა პრინცი',
+    size: "27x30 სმ",
+    price: "30 ₾"
+  },
+  ]
 
 const FirstTitle = [
     {id:1, text:'ხელნაკეთი ჩანთების'},
@@ -17,6 +27,7 @@ const SecondTitle = [
     {id:1, text:'შეუკვეთე შენთვის სასურველი ფორმის, ზომის და ფერის ჩანთა'},
     {id:2, text:'ჩვენ მას გამოგიგზავნით ნებისმიერ ადგილას'}
 ]
+
 
 
 
@@ -47,16 +58,20 @@ const MainPage = () => {
 
             {/* section second */}
             <div className={styles.sectionsecond}>
-                <h2 className={styles.secondtitle}>ქინას პოპულარული ჩანთები</h2>
+                <h2 className={styles.secondtitle}> პოპულარული ჩანთები</h2>
+                
                 <div className={styles.sectwoitems}>
                     <MainPageItemscopy />
+                    
                 </div>
+                <h3 className={styles.more}> მეტის ნახვა</h3>
+
             </div>
 
-            {/* third section - Simplified Bag Display */}
+          
             <div className={styles.sectionsecond}>
-                <h2 className={styles.secondtitle}>ჩანთები</h2>
-                <SimpleBagDisplay />
+                <h2 className={styles.secondtitle}>ფასდაკლებული მოდელები</h2>
+                <MainPageItemscopy />
             </div>
         </div>
     );
