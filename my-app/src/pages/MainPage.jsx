@@ -9,6 +9,7 @@ import imgBagthree from '../style/bagthree.webp';
 import MainPageItemscopy from "../components/MainPageItemscopy";
 import imgLabel from '../style/Component 2.webp';
 import imgMain from '../style/mainimg.webp';
+import CustomDesignSection from "../components/CustomDesignSection"; 
 
 
 const items0=[
@@ -66,7 +67,9 @@ const MainPage = () => {
                 </div>
                 <button className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />
+                
                 </button>
+                <CustomDesignSection />
 
             </div>
 

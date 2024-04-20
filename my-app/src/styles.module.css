@@ -42,6 +42,7 @@
  
 }
 
+
   .link,
   .linkimg{
     font-family: Helvetica;
@@ -89,10 +90,10 @@
   width: 100%;
   height: hug (496px);
   background-color: #619B8ACC;
-  /* background-image: url('./style/Rectangle 1.png');
+  background-image: url('./style/Rectangle 1.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; */
+  background-position: center;
   }
   .firstsecimgmain{
     width: 392px;
@@ -371,6 +372,44 @@ opacity: 0px;
   align-items: center;
   justify-content: center;
 }
+.customDesignSections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 220px 365px 108px 35px;
+  width: 100%;
+  height:  (600);
+  background: linear-gradient(88.44deg, #33586F 35.14%, #2E6A8E 49.97%, #5695BC 62.63%, #62A9D5 79.41%);
+
+}
+
+.captionDesign {
+left: 90%;
+font-family: Helvetica Neue LT GEO;
+font-size: 40px;
+font-weight: 200;
+line-height: 65.18px;
+
+  color: white;
+  
+  
+  
+}
+.subtextDesign {
+  font-size: 16px;  
+ color: white;
+  padding: 10px;
+  border-radius: 8px;  
+  margin-top: 10px;  
+  line-height: 0; 
+}
+
+.customDesignImage {
+  width: auto; 
+  height: 100%; 
+}
+
 
 
 
