@@ -1,40 +1,43 @@
 import React, { useEffect, useState } from 'react'
-import imgBagone from '../style/bagone.webp';
-import imgBagtwo from '../style/bagtwo.webp';
-import imgBagthree from '../style/bagthree.webp';
+import imgBagone from '../style/bagone.png';
+import imgBagtwo from '../style/bagtwo.png';
+import imgBagthree from '../style/bagthree.png';
+import imgBagfour from '../style/bagfour.png';
 import styles from '../styles.module.css';
 
 const items = [
         {
           id: 1,
           image: imgBagone,
-          secondary_title: 'პატარა პრინცი',
-          size: "27x30 სმ",
-          price: "30 ₾"
+          title: 'სახელწოდება: ჟირაფი',
+          size: "ჩანთის ზომა: 30X32",
+          price: "ჩანთის ფასი: ",
+          num: "35₾"
         },
         {
           id: 2,
           image: imgBagtwo,
-          secondary_title: 'ყვავილები',
-          size: "27x30 სმ",
-          price: "35 ₾"
+          title: 'სახელწოდება: ჟირაფი',
+          size: "ჩანთის ზომა: 30X32",
+          price: "ჩანთის ფასი: ",
+          num: "35₾"
         },
         {
-            id: 3,
-            image: imgBagthree,
-            secondary_title: 'ყვავილები',
-            size: "34x35 სმ",
-            price: "35 ₾"
-          },
-          {
-          id: 4,
+          id: 3,
           image: imgBagthree,
-          
-          secondary_title: 'ყვავილები',
-          size: "34x35 სმ",
-          price: "35 ₾"
+          title: 'სახელწოდება: SHhhh!',
+          size: "ჩანთის ზომა: 30X32",
+          price: "ჩანთის ფასი: ",
+          num: "35₾"
         },
-        
+        {
+          id: 4,
+          image: imgBagfour,
+          title: 'სახელწოდება: სკა',
+          size: "ჩანთის ზომა: 30X32",
+          price: "ჩანთის ფასი: ",
+          num: "35₾"
+        }      
 ]
 
 const MainPageItemscopy = () => {
@@ -45,10 +48,12 @@ const MainPageItemscopy = () => {
             <div className={styles.cardd} key={item.id}>
                 <img className={styles.itemimages} src={item.image} alt='img' />
                 <div className={styles.cardtexts}>
-                    <h3>{item.title}</h3>
-                    <h4>{item.secondary_title}</h4>
-                    
-                   
+                    <h3 className={styles.cardtitles}>{item.title}</h3>
+                    <h4 className={styles.cardtitles}>{item.size}</h4>
+                    <span className={styles.spanstyle}>
+                      <h4 className={styles.cardtitles}>{item.price}</h4>
+                      <h4 className={styles.price}>{item.num}</h4>
+                    </span>
                 </div>
             </div>
         ))}

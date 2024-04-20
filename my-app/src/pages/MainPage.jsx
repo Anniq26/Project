@@ -1,26 +1,13 @@
 import React from "react";
 import styles from '../styles.module.css';
 import { Link, NavLink } from "react-router-dom";
-import imgVector from '../style/sectiononeimg.webp';
-import imgBag from '../style/sectiononebag.webp';
-import imgBagone from '../style/bagone.webp';
-import imgBagtwo from '../style/bagtwo.webp';
-import imgBagthree from '../style/bagthree.webp';
 import MainPageItemscopy from "../components/MainPageItemscopy";
 import imgLabel from '../style/Component 2.webp';
 import imgMain from '../style/mainimg.webp';
 import CustomDesignSection from "../components/CustomDesignSection"; 
+import SalesBag from "../components/SalesBag";
 
 
-const items0=[
-    {
-    id: 1,
-    image: imgBagone,
-    secondary_title: 'პატარა პრინცი',
-    size: "27x30 სმ",
-    price: "30 ₾"
-  },
-  ]
 
 const FirstTitle = [
     {id:1, text:'ხელნაკეთი ჩანთების'},
@@ -61,13 +48,12 @@ const MainPage = () => {
 
             {/* section second */}
             <div className={styles.sectionsecond}>
-                <h2 className={styles.secondtitle}> პოპულარული ჩანთები</h2>
+                <h2 className={styles.secondtitle}> ქინას პოპულარული ჩანთები</h2>
                 <div className={styles.sectwoitems}>
                     <MainPageItemscopy />
                 </div>
                 <button className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />
-                
                 </button>
                 <CustomDesignSection />
 
@@ -75,8 +61,8 @@ const MainPage = () => {
 
           
             <div className={styles.sectionsecond}>
-                <h2 className={styles.secondtitle}>ფასდაკლებული მოდელები</h2>
-                <MainPageItemscopy />
+                <h2 className={styles.secondtitle}>თვის ფასდაკლებები</h2>
+                <SalesBag />
                 <button className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />
                 </button>
