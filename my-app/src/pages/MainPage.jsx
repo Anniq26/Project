@@ -43,7 +43,8 @@ const MainPage = () => {
                     ))}
                 </div>
             </div>
-            <img className={styles.firstsecimgmain} src={imgMain} alt="img" />   
+            <img className={styles.firstsecimgmain} src={imgMain} alt="img" /> 
+              
         </div>
 
             {/* section second */}

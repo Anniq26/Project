@@ -32,6 +32,7 @@
  transition: color 0.3s;  }
   .link:focus {
     border-bottom: 4px solid rgba(0, 0, 0, 1); 
+    color: #FCCA46;
   }
 
   .link:not(:focus) {
@@ -172,9 +173,9 @@
   font-family: Helvetica Neue LT GEO;
   font-size: 14px;
   font-weight: 500;
-  line-height: 16.9px;
+  line-height: 16px;
   text-align: left;
-  color: #FFFFFF;
+  color: #051126;
   }
   
   .sale {
@@ -200,7 +201,7 @@
   font-weight: 300;
   line-height: 16.9px;
   text-align: left;
-  color: #FFFFFF;
+  color: #051126;
   }
 
 
@@ -221,6 +222,73 @@ border-radius: 50px;
 opacity: 80%;
 background-color: #FFFFFF;
   }
+
+
+/* collectionspage */
+
+.collectionssecone{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 55px;
+}
+
+
+.collectionspage{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.collectionsbags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  height: 1056px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.collectionscard { 
+  width: calc((100% - 48px) / 3); /* Adjusted width */
+  height: 320px;
+  padding: 5px 0;
+  border-radius: 15px;
+  border: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #F0F0F0; 
+  border: 1px solid #051126;
+}
+
+.collecsecbtn{
+  display: flex;
+  justify-content: end;
+  width: Hug (146px)px;
+  height: Hug (24px)px;
+  top: 1338px;
+  left: 1186px;
+  gap: 27px;
+  opacity: 0px;
+
+}
+
+.collecsecbtnimg{
+  background: none;
+  cursor: pointer;
+  border-radius: 0px;
+  width: fit-content;
+  height: fit-content;
+}
+.collecbutton{
+  background-color: #FFFFFF;
+  border: 0px;
+}
+
 
   /* Footer */
   
@@ -293,7 +361,8 @@ height: auto;
   gap: 25px;
 }
 .footeroneimg,
-.linkimg{
+.linkimg,
+.collecsecbtnimg{
   width: fit-content;
   height: fit-content;
 }
@@ -325,7 +394,7 @@ height: auto;
   align-items: center;
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background: #233D4D;
+  background: #F0F0F0;
   width: 288px;
   height: 321px;
   top: 799px;
