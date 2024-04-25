@@ -13,8 +13,8 @@ const FooterItems = [
 ];
 
 const FooterParts = [
-    {id:1, image: instaImg},
-    {id:2, image: fbImg},
+    {id:1, image: instaImg, link:'https://bit.ly/3UynU89'},
+    {id:2, image: fbImg, link:'https://bit.ly/3Uwu3Sv'},
 ]
 
 const FooterAboutUs = [
@@ -54,8 +54,10 @@ const FooterList = () => (
                 <h5 className={styles.footeroneItemsP}>დაგვიმეგობრდით სოციალურ გვერდებზე:</h5>
                 <div className={styles.footericons} >
                 {FooterParts.map(item => (
-                    <div key={item.id}>
-                        <img  src={item.image} alt={item.title} />
+                    <div key={item.id}> 
+                    <Link to={item.link}>
+                    <img  src={item.image} alt={item.title} />
+                    </Link>
                     </div>
                 ))}
                 </div>

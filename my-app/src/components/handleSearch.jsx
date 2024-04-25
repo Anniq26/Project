@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import styles from '../styles.module.css';
-import imgSearch from '../style/search.webp';
+// import React, { useState } from 'react';
+// import styles from '../styles.module.css';
+// import imgSearch from '../style/search.webp';
 
 
 
 
 
-const HandleSearch = () => {
+// const HandleSearch = () => {
     
-};
+// };
 
 
-export default HandleSearch;
+// export default HandleSearch;
