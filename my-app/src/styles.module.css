@@ -73,7 +73,23 @@
 .ChangeLanguage img:last-child {
   margin-right: 0;
 }
-  
+
+
+.messagescont {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  bottom: auto;
+  top: 644px;
+  padding-right: 26px;
+}
+.messages {
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
 /* main page */
   .mainpagediv{
     display: flex;
@@ -82,19 +98,42 @@
     height: auto;
   }
 /* MainPage section  first */
+.switchsircles{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-top: 152px;
+  margin-bottom: 14px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+.secfirstwrp{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 108px 35px 0 35px;
+  width: 100%;
+  height: hug (496px);
+  background-image: url('./style/Rectangle 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+
+}
 .sectionfirst {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 108px 35px 108px 35px;
   width: 100%;
-  height: hug (496px);
-  background-color: #619B8ACC;
-  background-image: url('./style/Rectangle 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
   }
   .firstsecimgmain{
     width: 392px;
@@ -359,6 +398,7 @@ height: auto;
   display: flex;
   flex-direction: row;
   gap: 25px;
+  cursor: pointer;
 }
 .footeroneimg,
 .linkimg,
@@ -367,7 +407,11 @@ height: auto;
   height: fit-content;
 }
 
-
+.imgbarcode{
+  margin: 0 128px ;
+  width: fit-content;
+  height: fit-content;
+}
 /* footer second part styling */
 
 .footertwo{

@@ -6,6 +6,9 @@ import imgLabel from '../style/Component 2.webp';
 import imgMain from '../style/mainimg.webp';
 import CustomDesignSection from "../components/CustomDesignSection"; 
 import SalesBag from "../components/SalesBag";
+import imgEclipseone from '../style/Ellipse 3.png';
+import imgEclipsetwo from '../style/Ellipse 3.png';
+
 
 
 
@@ -20,13 +23,17 @@ const SecondTitle = [
 
 
 
-
+const switchCircles = [
+    {id:1, image: imgEclipseone },
+    {id:1, image: imgEclipsetwo }
+]
 
 const MainPage = () => {
     return (
         <div className={styles.mainpagediv}>
             {/* section first */}
-            <div className={styles.sectionfirst}>
+            <div className={styles.secfirstwrp}>
+                  <div className={styles.sectionfirst}>
                 <div className={styles.firstsecitems}>
                     <div className={styles.titleone}>
                         {FirstTitle.map(item => (
@@ -42,9 +49,17 @@ const MainPage = () => {
                         </div>
                     ))}
                 </div>
+                
             </div>
             <img className={styles.firstsecimgmain} src={imgMain} alt="img" /> 
-              
+          </div>
+            <div  className={styles.switchsircles}>
+                    {switchCircles.map (item => (
+                        <div key={item.id}>
+                            <img src={item.image} alt="img" />
+                        </div>
+                    ))}
+                </div>     
         </div>
 
             {/* section second */}
