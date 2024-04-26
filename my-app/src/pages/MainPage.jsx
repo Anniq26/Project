@@ -44,7 +44,7 @@ const MainPage = () => {
                     </div>
                 <div className={styles.titletwo}>
                     {SecondTitle.map(item => (
-                        <div key={item.id}>
+                        <div className={styles.circlewrp} key={item.id}>
                         <h2  className={styles.seconetwotitle}>{item.text}</h2>
                         </div>
                     ))}
