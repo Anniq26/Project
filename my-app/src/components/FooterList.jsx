@@ -6,6 +6,7 @@ import fbImg from '../style/facebook.webp';
 import imgBarcode from '../style/barcode.png';
 import styles from '../styles.module.css';
 import { Link } from "react-router-dom";
+import ContactPage from "../pages/ContactPage";
 
 const FooterItems = [
   { id: 1, title: 'მობილურის ნომერი:', number: '+995 574 085 413' },
@@ -37,7 +38,7 @@ const FooterList = () => {
           {FooterItems.map(item => (
             <div className={styles.footeroneItems} key={item.id}>
               <p className={styles.footeroneItemsP}>{item.title}</p>
-              <Link className={styles.footerlinks}>{item.number}{item.mail}{item.address}</Link>
+              <Link className={styles.footerlinks} to={'/contact'}>{item.number}{item.mail}{item.address}</Link>
             </div>
           ))}
         </div>
