@@ -6,6 +6,7 @@ import imgLogo from '../style/logo.webp';
 import ChangeLanguage from "../components/ChangeLanguage";
 import HeaderFrame from "../components/HeaderFrame"; 
 import SearchInput from '../components/SearchInput'; 
+import Messages from '../components/Messages';
 
 const LinkLayout = () => {
     return (
@@ -27,7 +28,7 @@ const LinkLayout = () => {
                 <SearchInput />  
                 </div>
             </div>
-         
+            <Messages/>
             <Outlet/>
             <FooterList/>
         </div>

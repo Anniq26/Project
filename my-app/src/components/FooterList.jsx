@@ -3,65 +3,73 @@ import phoneImg from '../style/phone.webp';
 import mailImg from '../style/mail.webp';
 import instaImg from '../style/instagram.webp';
 import fbImg from '../style/facebook.webp';
+import imgBarcode from '../style/barcode.png';
 import styles from '../styles.module.css';
 import { Link } from "react-router-dom";
+import ContactPage from "../pages/ContactPage";
 
 const FooterItems = [
-{id:1, title:'მობილურის ნომერი:', number: '+995 574 085 413'},
-{id:2, title:'Gmail:', mail: 'Qina@gmail.com'},
-{id:3, title:'მისამართი:', address: 'ჩხოროწყუ, მუხური.'}
+  { id: 1, title: 'მობილურის ნომერი:', number: '+995 574 085 413' },
+  { id: 2, title: 'Gmail:', mail: 'Qina@gmail.com' },
+  { id: 3, title: 'მისამართი:', address: 'ჩხოროწყუ, მუხური.' }
 ];
 
 const FooterParts = [
-    {id:1, image: instaImg},
-    {id:2, image: fbImg},
-]
+  { id: 1, image: instaImg, link: 'https://bit.ly/3UynU89' },
+  { id: 2, image: fbImg, link: 'https://bit.ly/3Uwu3Sv' },
+];
 
 const FooterAboutUs = [
-    {id:1, title: 'ქინას ისტორია'},
-    {id:2, title: 'სამომავლო გეგმები'}
-]
+  { id: 1, title: 'ქინას ისტორია' },
+  { id: 2, title: 'სამომავლო გეგმები' }
+];
 
-const FooterList = () => (
-    <div className={styles.footer}> 
+const FooterList = () => {
+
+    const handleImageClick = (link) => {
+        window.open(link, "_blank");
+      }
+
+  return (
+    <div className={styles.footer}>
+      <div className={styles.footerPartOne}>
+        <h5 className={styles.footeroneItemsP}>საკონტაქტო:</h5>
+        <div className={styles.footerone}>
+          {FooterItems.map(item => (
+            <div className={styles.footeroneItems} key={item.id}>
+              <p className={styles.footeroneItemsP}>{item.title}</p>
+              <Link className={styles.footerlinks} to={'/contact'}>{item.number}{item.mail}{item.address}</Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.aboutusfooter}>
         <div className={styles.footerPartOne}>
-            <h5 className={styles.footeroneItemsP}>საკონტაქტო:</h5>
-            <div className={styles.footerone}>
-                {FooterItems.map(item => (
-                    <div className={styles.footeroneItems} key={item.id}>
-                    <p className={styles.footeroneItemsP}>{item.title}</p>
-                    <Link className={styles.footerlinks}>{item.number}{item.mail}{item.address}</Link>
-                    </div>
-                ))}
+          <h5 className={styles.footeroneItemsP}>ჩვენს შესახებ</h5>
+          {FooterAboutUs.map(item => (
+            <div className={styles.footeroneItems} key={item.id}>
+              <Link className={styles.footerlinksptwo}>{item.title}</Link>
             </div>
+          ))}
         </div>
+      </div>
 
-        <div className={styles.aboutusfooter}>
-            <div className={styles.footerPartOne}>
-                <h5 className={styles.footeroneItemsP}>ჩვენს შესახებ</h5> 
-                {
-                    FooterAboutUs.map(item => (
-                        <div className={styles.footeroneItems} key={item.id}>
-                            <Link className={styles.footerlinksptwo}>{item.title}</Link>
-                        </div>
-                    ))
-                }
-            </div>
+      <div className={styles.footertwo}>
+        <div className={styles.footerPartOne}>
+          <h5 className={styles.footeroneItemsP}>დაგვიმეგობრდით სოციალურ გვერდებზე:</h5>
+          <div className={styles.footericons}>
+            {FooterParts.map(item => (
+              <div key={item.id} >
+                <img src={item.image} alt={item.title} onClick={() => handleImageClick(item.link)} />
+              </div>
+            ))}            
+          </div>
         </div>
-
-        <div className={styles.footertwo}>
-            <div className={styles.footerPartOne}>
-                <h5 className={styles.footeroneItemsP}>დაგვიმეგობრდით სოციალურ გვერდებზე:</h5>
-                <div className={styles.footericons} >
-                {FooterParts.map(item => (
-                    <div key={item.id}>
-                        <img  src={item.image} alt={item.title} />
-                    </div>
-                ))}
-                </div>
-            </div>
-        </div>
+        <img className={styles.imgbarcode} src={imgBarcode} alt="img" />
+      </div>
     </div>
-)
+  )
+}
 
-export default FooterList
+export default FooterList;
