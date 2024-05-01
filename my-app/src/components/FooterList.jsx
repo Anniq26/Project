@@ -20,8 +20,8 @@ const FooterParts = [
 ];
 
 const FooterAboutUs = [
-  { id: 1, title: 'ქინას ისტორია' },
-  { id: 2, title: 'სამომავლო გეგმები' }
+  { id: 1, title: 'ქინას ისტორია', link:'/aboutus' },
+  { id: 2, title: 'სამომავლო გეგმები', link:'/aboutus' }
 ];
 
 const FooterList = () => {
@@ -46,10 +46,10 @@ const FooterList = () => {
 
       <div className={styles.aboutusfooter}>
         <div className={styles.footerPartOne}>
-          <h5 className={styles.footeroneItemsP}>ჩვენს შესახებ</h5>
+          <h5 className={styles.footeroneItemsP}>ჩვენ შესახებ</h5>
           {FooterAboutUs.map(item => (
             <div className={styles.footeroneItems} key={item.id}>
-              <Link className={styles.footerlinksptwo}>{item.title}</Link>
+              <Link className={styles.footerlinksptwo} to={item.link}>{item.title}</Link>
             </div>
           ))}
         </div>

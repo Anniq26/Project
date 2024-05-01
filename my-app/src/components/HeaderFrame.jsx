@@ -5,7 +5,7 @@ import styles from '../styles.module.css'; // Adjust the path to your styles.mod
 const HeaderFrame = () => {
     return (
         <div className={styles.headerFrame}>
-       დამზადებულია სიყვარულით ქინასგან        </div>
+       დამზადებულია სიყვარულით, ქინასგან        </div>
     );
 };
 

@@ -14,7 +14,7 @@ const CustomDesignSection = () => {
                 შექმენი შენი სასურველი დიზაინით ჩანთა რომელიც
                  იქნება დაკავშირებული </p>
                  <p className={styles.subtextDesign}>შენს სურვილებთან,
-                 მოგონებებთან ან საყვარელ ადამიენებთან!</p>
+                 მოგონებებთან ან საყვარელ ადამიანებთან!</p>
                  <p className={styles.subtextDesign}>იყავი უბრალო და ამავდროულად გამორჩეული</p>
                  </div>
                 <span className={styles.spanimages}>

@@ -17,7 +17,7 @@ const FirstTitle = [
     {id:2, text:'მრავალფეროვანი არჩევანი'}
 ]
 const SecondTitle = [
-    {id:1, text:'შეუკვეთე შენთვის სასურველი ფორმის, ზომის და ფერის ჩანთა'},
+    {id:1, text:'შეუკვეთე შენთვის სასურველი: ფორმის, ზომის და ფერის ჩანთა'},
     {id:2, text:'ჩვენ მას გამოგიგზავნით ნებისმიერ ადგილას'}
 ]
 
@@ -27,6 +27,11 @@ const switchCircles = [
     {id:1, image: imgEclipseone },
     {id:1, image: imgEclipsetwo }
 ]
+
+
+const handleClick = (route) => {
+    window.open(route, '_self');
+};
 
 const MainPage = () => {
     return (
@@ -68,7 +73,7 @@ const MainPage = () => {
                 <div className={styles.sectwoitems}>
                     <MainPageItemscopy />
                 </div>
-                <button className={styles.more}>მეტის ნახვა 
+                <button onClick={() => handleClick('/collections')} className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />
                 </button>
                 <CustomDesignSection />
@@ -79,7 +84,7 @@ const MainPage = () => {
             <div className={styles.sectionsecond}>
                 <h2 className={styles.secondtitle}>თვის ფასდაკლებები</h2>
                 <SalesBag />
-                <button className={styles.more}>მეტის ნახვა 
+                <button onClick={() => handleClick('/offers')} className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />
                 </button>
             </div>

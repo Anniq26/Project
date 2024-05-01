@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles.module.css';
 import imgContact from '../style/contactimg.png';
 import imgArr from '../style/arr.png';
 
 
+
 const ContactPage = () => {
- 
+
+  const contactInfo = [
+    { title: 'ტელეფონი:', content: '+995 574 08 54 13', link: 'tel:+995574085413' },
+    { title: 'მისამართი:', content: 'ჩხოროწყუ, მუხური.', link: 'https://bit.ly/4bfqju5' },
+    { title: 'Gmail:', content: 'Qina@gmsil.com', link: 'mailto:Qina@gmsil.com' },
+    {content: 'ნებისმერ დროს დაგვიკავშირდით თქვენთვის სასურველ პლატფორმაზე, ჩვენ მალე გიპასუხებთ.' }
+  ];
+
+  const qinaInfo = [
+    {title:'მიწოდება:' , content:'“ქინა” უზრუნველყოფს, მომხმარებლისთვის სასურველ დროსა და ადგილას, ნივთის მიწოდების სერვისს. საქართველოს ნებისმიერ წერტილში შესაძლებელი იქნება თქვენი შეკვეთის მიღება, რა თქმა უნდა, უმოკლეს ვადაში.'},
+    {title:'შეკვეთის გაფორმება:' , content:'შეკვეთის გასაფორმებლად დაგვიკავშირდით ნომერზე, ან მოგვწერეთ თქვენთვის სასურველ სოციალურ ქსელში, ჩვენ მალე გიპასუხებთ.'}
+  ] 
   return (
     <div className={styles.contactspage}>
       <div className={styles.pageorient}>
@@ -19,42 +31,33 @@ const ContactPage = () => {
           <img className={styles.contactspicture} src={imgContact} alt="img" />
         </div>
         <div className={styles.contactstext}>
-            <div className={styles.contentwrapper}>
-              <h2 className={styles.contacttitle}>კონტაქტი:</h2>
+          {contactInfo.map(({ title, content, link }) => (
+            <div key={title} className={styles.contentwrapper}>
+              <h2 className={styles.contacttitle}>{title}</h2>
               <div className={styles.infowrapper}>
-                <p className={styles.phonenmb}>ტელეფონი: <Link className={styles.phonenmblink} to="tel:+995574085413">+995 574 08 54 13</Link></p> 
-                <p className={styles.phonenmb}>მისამართი: <Link className={styles.phonenmblink} to="https://bit.ly/4bfqju5"> ჩხოროწყუ, მუხური.</Link></p> 
-                <p className={styles.phonenmb}>Gmail: <Link className={styles.phonenmblink} to="mailto:Qina@gmsil.com">Qina@gmsil.com</Link></p>
-                <p className={styles.phonenmbp}>
-                  ნებისმერ დროს დაგვიკავშირდით 
-                  თქვენთვის სასურველ პლათფომაზე,
-                  ჩვენ მალევე გისპაუხებთ.
-                </p>
+                {link ? (
+                  <p className={styles.phonenmb}>
+                    <Link className={styles.phonenmblink} to={link}>
+                      {content} 
+                     </Link>
+                  </p>
+                ) : (
+                  <p className={styles.phonenmbp}>{content}</p>
+                )}
               </div>
             </div>
+          ))}
+      
+        {qinaInfo.map(({ title, content}) => (
           <div className={styles.contentwrapper}>
-            <h2 className={styles.contacttitle} >მიწოდება:</h2>
-            <p className={styles.phonenmbp}>
-              “ქინა” უზრუნველყოფს მომხმარებლისთვის 
-              სასურველ დროსა და ადგილას მომხმარებლისთვის
-              ნივთის მიწოდების სერვისს. საქართველოს 
-              ნებისმერ წერტილში შესაძლებელი იქნება 
-              თქვენი სასურველი შეკვეთის მიღება 
-              რათქმაუნდა უმოკლეს ვადაში. 
-            </p>
+            <h2 className={styles.contacttitle}>{title}</h2>
+            <p className={styles.phonenmbp}>{content}</p>
           </div>
-          <div className={styles.contentwrapper}>
-            <h2 className={styles.contacttitle}>შეკვეთის გაფორმება:</h2>
-            <p className={styles.phonenmbp}>
-              შეკვეთის გასაფორმებლად დაგვიკავშირდით
-              ნომერეზე, ან მოგვწერეთ თქვენთვის სასურველ
-              სოცოალურ ქსელში, ჩვენ მალევე გიპასხუებთ.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
+  </div>
   );
-}
+};
 
 export default ContactPage;

@@ -7,26 +7,23 @@ import ChangeLanguage from "../components/ChangeLanguage";
 import HeaderFrame from "../components/HeaderFrame"; 
 import SearchInput from '../components/SearchInput'; 
 import Messages from '../components/Messages';
+import HeaderLinks from '../components/HeaderLinks';
 
 const LinkLayout = () => {
     return (
         <div className={styles.layoutRoot}>
             <HeaderFrame />
-            <div className={styles.header}>   
+            <div className={styles.headerwrappr}> 
+                <div className={styles.header}> 
                 <img src={imgLogo} alt="ლოგო" className={styles.logoStyle} />           
                 <div className={styles.linksstyle}>
-                    <Link className={styles.link} to={'/main'}>მთავარი</Link>
-                    <Link className={styles.link} to={'/collections'}>კოლექცია</Link>
-                    <Link className={styles.link} to={'/offers'}>შეთავაზებები</Link>
-                    <Link className={styles.link} to={'/madebyu'}>შექმენი შენით</Link>
-                    <Link className={styles.link} to={'/contact'}>კონტაქტი</Link>
-                    <Link className={styles.link} to={'/aboutus'}>ჩვენ შესახებ</Link>
+                <HeaderLinks/>
                 </div>
                 <ChangeLanguage />
-                
-                <div >
+                <div className={styles.searchwrp}>
                 <SearchInput />  
                 </div>
+                </div> 
             </div>
             <Messages/>
             <Outlet/>
