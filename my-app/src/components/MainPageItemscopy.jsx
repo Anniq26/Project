@@ -3,7 +3,7 @@ import imgBagone from '../style/bagone.png';
 import imgBagtwo from '../style/bagtwo.png';
 import imgBagthree from '../style/bagthree.png';
 import imgBagfour from '../style/bagfour.png';
-import styles from '../styles.module.css';
+import styles from '../mainpgstyles.module.css';
 
 const items = [
         {

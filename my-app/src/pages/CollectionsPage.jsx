@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import styles from '../styles.module.css';
+import styles from '../collectionspgstyles.module.css';
 import CollectionsPageBags from '../components/CollectionsPageBags';
 import imgLeftArrow from '../style/arrowleft.png';
 import imgRigtArrow from '../style/arrowright.png';

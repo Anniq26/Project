@@ -1,5 +1,5 @@
 import React from "react"
-import styles from '../styles.module.css';
+import styles from '../contactsxaboutuspgstyles.module.css';
 import { Link, } from "react-router-dom";
 import imgAboutUs from '../style/aboutus.png';
 import imgArr from '../style/arr.png';

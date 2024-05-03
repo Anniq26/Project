@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+
+/* main page */
+  .mainpagediv{
+    display: flex;
+    flex-direction: column;
+    width: Fixed (1,440px)px;
+    height: auto;
+  }
+/* MainPage section  first */
+.switchsircles{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-top: 152px;
+  margin-bottom: 14px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+
+.secfirstwrp{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 108px 35px 0 35px;
+  width: 100%;
+  height: auto;
+  background-image: url('./style/Rectangle 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sectionfirst {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  }
+  .firstsecimgmain{
+    width: 392px;
+    height: 426px;
+    left: 940px;
+    border-radius: 10px ;
+  }
+
+
+  .firstsecitems{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    flex-wrap: wrap;
+    
+  }
+
+  .seconefirsttitle{
+    font-family: Helvetica Neue LT GEO;
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 65.18px;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  .seconetwotitle{
+    margin-top: 22px;
+    font-family: Helvetica Neue LT GEO;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.48px;
+    text-align: left;
+    color: #FFFFFF;
+
+  }
+
+  /* second section */
+  .sectionsecond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 46px;
+    gap: 46px;
+  }
+  .secondtitle{
+    width: Fixed (1,440px)px;
+    height: Fixed (104px)px;
+    top: 675px;
+    padding: 32px 108px 32px 108px;
+    font-family: Helvetica Neue LT GEO;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.9px;
+    text-align: left;
+  }
+
+
+  .spanstyle {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .price {
+  font-family: Helvetica Neue LT GEO;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #051126;
+  font-family: Helvetica Neue LT GEO;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.9px;
+  text-align: left;
+  }
+  
+  .sale {
+  font-family: Helvetica Neue LT GEO;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.9px;
+  text-align: left;
+  color: #EB000E;
+    
+  }
+
+  .cardtexts{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 21px ;
+    gap: 8px;
+    text-align: center;
+    margin-top: 10px;
+    color: #7dacca;
+  
+  }
+
+  .cardtitles {
+  font-family: Helvetica Neue LT GEO;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.9px;
+  text-align: left;
+  color: #051126;
+  }
+
+
+  .more{
+  font-family: Helvetica Neue LT GEO;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.73px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  color: #000000;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #00000033;
+  border-radius: 50px;
+  opacity: 80%;
+  background-color: #FFFFFF;
+  }
+  
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center; 
+  gap: 20px; 
+  top: 779px;
+  padding: 16px 108px ;
+}
+.cardd {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #F0F0F0;
+  width: 288px;
+  height: 321px;
+  gap:8px ;
+  justify-content: center;
+  border-radius: 15px; 
+  border: 1px solid #051126; 
+  opacity: 0px;
+}
+.itemimages {
+  width: fit-content;
+  height: auto;
+  cursor: pointer;
+}
+
+
+.spanimages{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  width: auto;
+  height: auto;
+}
+
+.customDesignSections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 108px;
+  gap: 98px;
+  width: auto;
+  height:  auto;
+  background: linear-gradient(88.44deg, #33586F 35.14%, #2E6A8E 49.97%, #5695BC 62.63%, #62A9D5 79.41%);
+
+}
+
+.captionDesign{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 22px;
+  width: auto;
+}
+
+.captionDesigntitle {
+  display: flex;
+  flex-wrap: wrap;
+  left: 90%;
+  font-family: Helvetica Neue LT GEO;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 65.18px;
+  color: white;
+}
+.subtextDesign {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;  
+ color: white;
+  padding: 10px;
+  border-radius: 8px;  
+  margin-top: 10px;  
+  line-height: 0; 
+}
+
+.customDesignImage {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto; 
+  height:  auto; 
+  border-radius: 10px;
+  }
+
+  @media (max-width: 900px) {
+    .customDesignImage,
+    .spanimages {
+      width: 90%;
+    }}
+
+
+
+
+

@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+
+/* contacts page */
+.contactspage{ 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 135px;
+
+}
+.pageorient{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-left: 250px;
+  padding: 28px 456px 35px 108px ;
+  width: 100%;
+}
+.contactsplink{ 
+  font-family: Helvetica Neue LT GEO;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.48px;
+  text-align: left;
+  color: #00000099;
+  text-decoration: none;
+}
+.contactsplink:focus{
+ color: #000000;
+}
+.contactspagewrp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  gap: 128px;
+
+}
+.contentwrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.infowrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.contactstext{
+  display: flex;
+  flex-direction: column;
+  width: Hug (474px)px;
+  height: auto;
+  left: 836px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contacttitle {
+  font-family: Helvetica Neue LT GEO;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26.55px;
+  text-align: left;
+  color: #000000;
+  height: auto;
+}
+
+.phonenmb {
+  flex-wrap: wrap;
+  font-family: Helvetica Neue LT GEO;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.14px;
+  text-align: left;
+  color: #000000;
+}
+.phonenmbp{
+  display: flex;
+  flex-wrap: wrap;
+  width: 454px;
+  height: auto;
+  font-family: Helvetica Neue LT GEO;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.73px;
+  text-align: left;
+
+}
+.phonenmblink{
+  text-decoration: none;
+  color: #000000;
+}
+.contactspicture {
+  top: 275px;
+  left: 108px;
+  width: auto;
+  height: 100%;
+}
+
+.contactspicturewrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00000066;
+  width: 600px;
+  height: 600px;
+  border-radius: 15px;
+}

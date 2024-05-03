@@ -8,7 +8,7 @@ import imgBagsix from '../style/bagsix.png';
 import imgBagseven from '../style/bagseven.png';
 import imgBageight from '../style/bageight.png';
 import imgBagnine from '../style/bagnine.png';
-import styles from '../styles.module.css';
+import styles from '../collectionspgstyles.module.css';
 
 
 const items = [

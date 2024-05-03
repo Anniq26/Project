@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+
+.messagescont {
+  display: flex;
+  justify-content: end;
+  width: fit-content;
+  z-index: 1000;
+  position: fixed;
+  bottom: auto;
+  top: 644px;
+  padding-right: 26px;
+  right: 0;
+}
+.messages {
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .messagescont, 
+  .messages {
+    display: none;
+  }
+}
+/* collectionspage */
+
+.collectionssecone{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 55px;
+}
+
+
+.collectionspage{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.collectionsbags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  height: 1056px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.collectionscard { 
+  width: calc((100% - 48px) / 3); /* Adjusted width */
+  height: 320px;
+  padding: 5px 0;
+  border-radius: 15px;
+  border: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #F0F0F0; 
+  border: 1px solid #051126;
+}
+
+.collecsecbtn{
+  display: flex;
+  justify-content: end;
+  width: Hug (146px)px;
+  height: Hug (24px)px;
+  top: 1338px;
+  left: 1186px;
+  gap: 27px;
+  opacity: 0px;
+
+}
+
+.collecsecbtnimg{
+  background: none;
+  cursor: pointer;
+  border-radius: 0px;
+  width: fit-content;
+  height: fit-content;
+}
+.collecbutton{
+  background-color: #FFFFFF;
+  border: 0px;
+}
+
+.spanstyle {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.price {
+font-family: Helvetica Neue LT GEO;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+text-align: left;
+color: #051126;
+font-family: Helvetica Neue LT GEO;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.9px;
+text-align: left;
+}
+
+.sale {
+font-family: Helvetica Neue LT GEO;
+font-size: 14px;
+font-weight: 300;
+line-height: 16.9px;
+text-align: left;
+color: #EB000E;
+  
+}
+
+.cardtexts{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 21px ;
+  gap: 8px;
+  text-align: center;
+  margin-top: 10px;
+  color: #7dacca;
+
+}
+
+.cardtitles {
+font-family: Helvetica Neue LT GEO;
+font-size: 14px;
+font-weight: 300;
+line-height: 16.9px;
+text-align: left;
+color: #051126;
+}
+
+
+.more{
+font-family: Helvetica Neue LT GEO;
+font-size: 18px;
+font-weight: 500;
+line-height: 21.73px;
+text-align: center;
+display: flex;
+align-items: center;
+margin: auto;
+color: #000000;
+padding: 5px;
+cursor: pointer;
+border: 1px solid #00000033;
+border-radius: 50px;
+opacity: 80%;
+background-color: #FFFFFF;
+}
+
+.flexContainer {
+display: flex;
+flex-wrap: wrap; 
+justify-content: center;
+align-items: center; 
+gap: 20px; 
+top: 779px;
+padding: 16px 108px ;
+}
+.cardd {
+flex: 0 1 21%; 
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0 20px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+background: #F0F0F0;
+width: 288px;
+height: 321px;
+top: 799px;
+left: 108px;
+gap:8px ;
+justify-content: center;
+border-radius: 15px; 
+border: 1px solid #051126; 
+opacity: 0px;
+}
+.itemimages {
+width: fit-content;
+height: auto;
+cursor: pointer;
+}
+
+
+.spanimages{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin-top: 55px;
+width: auto;
+height: auto;
+}

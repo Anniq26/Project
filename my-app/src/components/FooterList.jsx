@@ -4,7 +4,7 @@ import mailImg from '../style/mail.webp';
 import instaImg from '../style/instagram.webp';
 import fbImg from '../style/facebook.webp';
 import imgBarcode from '../style/barcode.png';
-import styles from '../styles.module.css';
+import styles from '../headerfooterpgstyles.module.css';
 import { Link } from "react-router-dom";
 import ContactPage from "../pages/ContactPage";
 

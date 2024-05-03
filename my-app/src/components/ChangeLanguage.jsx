@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import georgianIcon from '../style/georgia.webp';
 import englishIcon from '../style/english.webp';
-import styles from '../styles.module.css';
+import styles from '../headerfooterpgstyles.module.css';
 
 const ChangeLanguage = () => {
   const [language, setLanguage] = useState('');

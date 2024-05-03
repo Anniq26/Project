@@ -3,7 +3,7 @@ import imgBagfive from '../style/bagfive.png';
 import imgBagsix from '../style/bagsix.png';
 import imgBagseven from '../style/bagseven.png';
 import imgBageight from '../style/bageight.png';
-import styles from '../styles.module.css';
+import styles from '../mainpgstyles.module.css';
 
 const items = [
     {

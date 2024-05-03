@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles.module.css';
+import styles from '../mainpgstyles.module.css';
 import customDesignImage from '../style/artjam_totebag_diykit01_2000x 1.png';
 import imgVector from '../style/vector.png';
 import imgHeart from '../style/heart.png';
