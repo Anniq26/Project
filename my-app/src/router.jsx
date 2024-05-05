@@ -43,9 +43,7 @@ const router = [
             {
                 element:<MadeByUPage/>,
                 path:'/madebyu'
-            }
-            
-
+            },
         ]
     }
 ]

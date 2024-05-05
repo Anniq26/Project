@@ -17,7 +17,7 @@ const items = [
         {
           id: 2,
           image: imgBagtwo,
-          title: 'სახელწოდება: ჟირაფი',
+          title: 'სახელწოდება: ფისო',
           size: "ჩანთის ზომა: 30X32",
           price: "ჩანთის ფასი: ",
           num: "35₾"
