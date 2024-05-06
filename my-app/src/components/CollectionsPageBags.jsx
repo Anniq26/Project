@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import imgBagone from '../style/bagone.png';
 import imgBagtwo from '../style/bagtwo.png';
 import imgBagthree from '../style/bagthree.png';
@@ -10,86 +10,80 @@ import imgBageight from '../style/bageight.png';
 import imgBagnine from '../style/bagnine.png';
 import styles from '../collectionspgstyles.module.css';
 
-
 const items = [
-    {
-        id: 1,
-        image: imgBagone,
-        title: 'სახელწოდება: ჟირაფი',
-        size: "ჩანთის ზომა: 30X32",
-        price: "ჩანთის ფასი: ",
-        num: "35₾"
-      },
-      {
-        id: 2,
-        image: imgBagtwo,
-        title: 'სახელწოდება: ჟირაფი',
-        size: "ჩანთის ზომა: 30X32",
-        price: "ჩანთის ფასი: ",
-        num: "35₾"
-      },
-      {
-        id: 3,
-        image: imgBagthree,
-        title: 'სახელწოდება: SHhhh!',
-        size: "ჩანთის ზომა: 30X32",
-        price: "ჩანთის ფასი: ",
-        num: "35₾"
-      },
-      {
-        id: 4,
-        image: imgBagfour,
-        title: 'სახელწოდება: სკა',
-        size: "ჩანთის ზომა: 30X32",
-        price: "ჩანთის ფასი: ",
-        num: "35₾"
-      },
-      {
-        id: 1,
-        image: imgBagfive,
-        title: 'სახელწოდება: ფისო',
-        size: "ჩანთის ზომა: 45X60",
-        price: "ფასდაკლებით: ",
-        num:'60₾'
-      },
-      {
-        id: 2,
-        image: imgBagsix,
-        title: 'სახელწოდება: ფისო',
-        size: "ჩანთის ზომა: 45X60",
-        price: "ფასდაკლებით: ",
-        num:'55₾'
-      },
-      {
-        id: 3,
-        image: imgBagseven,
-        title: 'სახელწოდება: ფისო',
-        size: "ჩანთის ზომა: 45X60",
-        price: "ფასდაკლებით: ",
-        num:'45₾'
-      },
-      {
-        id: 4,
-        image: imgBageight,
-        title: 'სახელწოდება: ფისო',
-        size: "ჩანთის ზომა: 45X60",
-        price: "ფასდაკლებით: ",
-        num:'60₾'
-      },
-      {
-        id: 9,
-        image: imgBagnine,
-        title: 'სახელწოდება: ფუტკრები',
-        size: "ჩანთის ზომა: 30X32",
-        price: "ჩანთის ფასი: ",
-        num: "35₾"
-      }       
-]
-
-
-
-
-
+  {
+    id: 1,
+    image: imgBagone,
+    title: 'სახელწოდება: ჟირაფი',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ჩანთის ფასი: ",
+    num: "35₾"
+  },
+  {
+    id: 2,
+    image: imgBagtwo,
+    title: 'სახელწოდება: ფისო',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ჩანთის ფასი: ",
+    num: "35₾"
+  },
+  {
+    id: 3,
+    image: imgBagthree,
+    title: 'სახელწოდება: SHhhh!',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ჩანთის ფასი: ",
+    num: "35₾"
+  },
+  {
+    id: 4,
+    image: imgBagfour,
+    title: 'სახელწოდება: სკა',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ჩანთის ფასი: ",
+    num: "35₾"
+  },
+  {
+    id: 5,
+    image: imgBagfive,
+    title: 'სახელწოდება: ფისუნია',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ფასდაკლებით: ",
+    num: '60₾'
+  },
+  {
+    id: 6,
+    image: imgBagsix,
+    title: 'სახელწოდება: სპანჯბობი',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ფასდაკლებით: ",
+    num: '60₾'
+  },
+  {
+    id: 7,
+    image: imgBagseven,
+    title: 'სახელწოდება: რთველი',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ფასდაკლებით: ",
+    num: '60₾'
+  },
+  {
+    id: 8,
+    image: imgBageight,
+    title: 'სახელწოდება: ეიფელის კოშკი',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ფასდაკლებით: ",
+    num: '60₾'
+  },
+  {
+    id: 9,
+    image: imgBagnine,
+    title: 'სახელწოდება: ფუტკრები',
+    size: "ჩანთის ზომა: 30X32",
+    price: "ჩანთის ფასი: ",
+    num: "35₾"
+  }
+];
 
 const CollectionsPageBags = () => {
   return (
@@ -101,15 +95,14 @@ const CollectionsPageBags = () => {
             <h3 className={styles.cardtitles}>{item.title}</h3>
             <h4 className={styles.cardtitles}>{item.size}</h4>
             <span className={styles.spanstyle}>
-              <h4 className={styles.cardtitles}>{item.price}</h4>
+              <h4 className={styles.cardtitles} style={{ color: item.id >= 5 && item.id <= 8 ? '#EB000E' : '' }}>{item.price}</h4>
               <h4 className={styles.price}>{item.num}</h4>
             </span>
           </div>
         </div>
       ))}
-
     </div>
-  )
-}
+  );
+};
 
-export default CollectionsPageBags
+export default CollectionsPageBags;

@@ -10,7 +10,7 @@ const HeaderLinks = () => {
     const links = [
       { path: '/main', label: 'მთავარი' },
       { path: '/collections', label: 'კოლექცია' },
-      { path: '/offers', label: 'შეთავაზებები' },
+      { path: '/collections/offers', label: 'შეთავაზებები' },
       { path: '/madebyu', label: 'შექმენი შენით' },
       { path: '/contact', label: 'კონტაქტი' },
       { path: '/aboutus', label: 'ჩვენ შესახებ' },

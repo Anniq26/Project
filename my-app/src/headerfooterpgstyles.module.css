@@ -62,6 +62,8 @@
     display: flex;
     align-items: center;
     width: 129px;
+    justify-content: space-between;
+    flex-direction: row;
   }
   
   .ChangeLanguage img {
@@ -75,8 +77,29 @@
     margin-right: 0;
   }
   
+  .imgarrowdown {
+    width: 12px !important;
+    height: 7.4px !important;
+    cursor: pointer;
+  }
+  .changelanguagetxt,
+  .languageOptions{
+  font-family: Helvetica Neue LT GEO;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.48px;
+  text-align: left;
+  color: #000000;
+  }
+  .languages {
+    /* position: absolute; */
+    background-color: white; 
+    border-radius: 4px; 
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
   
-
 
 .messagescont {
   display: flex;
