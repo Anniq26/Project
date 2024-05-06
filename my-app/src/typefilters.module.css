@@ -1,0 +1,46 @@
+.typefilterwrp{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.typeFilterContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 12px;
+  }
+  .typeItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .typeSquare {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .selected {
+    border: 2px solid #FDDE8B;
+  }
+  
+  .label{
+  font-family: Helvetica Neue LT GEO;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.31px;
+  text-align: left;
+  }
+  .filtertitle{
+  font-family: Helvetica Neue LT GEO;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.73px;
+  text-align: left;
+  color: #FCCA46;
+  }

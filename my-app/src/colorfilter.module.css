@@ -1,0 +1,28 @@
+
+.colorfilterwrp{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 56px;
+}
+.colorFilterContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .colorFilter {
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    border-radius: 50%;
+  }
+  .filtertitle{
+    font-family: Helvetica Neue LT GEO;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.73px;
+    text-align: left;
+    
+    }

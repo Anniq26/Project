@@ -9,17 +9,15 @@
 
 
 /* page orient */
-
 .pageorient{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  width: fit-content;
   gap: 14px;
   margin-left: 250px;
   padding: 28px 456px 35px 108px ;
-  width: 100%;
 }
 .madebyuplink{ 
   font-family: Helvetica Neue LT GEO;

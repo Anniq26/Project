@@ -38,7 +38,7 @@ const router = [
             },
             {
                 element:<OffersPage/>,
-                path:'/offers'
+                path:'/collections/offers'
             },
             {
                 element:<MadeByUPage/>,
