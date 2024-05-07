@@ -34,7 +34,7 @@ const PriceFilter = ({ filter }) => {
         ]}
       />
 
-      <p className={styles.pricefilterrange}> ${priceRange[0]}{text1} - ${priceRange[1]}{text2}</p>
+      <p className={styles.pricefilterrange}> {priceRange[0]}{text1} - {priceRange[1]}{text2}</p>
     </div>
   );
 };
