@@ -9,6 +9,7 @@ import imgBagseven from '../style/bagseven.png';
 import imgBageight from '../style/bageight.png';
 import imgBagnine from '../style/bagnine.png';
 import styles from '../collectionspgstyles.module.css';
+import { Link } from 'react-router-dom';
 
 const items = [
   {
@@ -89,7 +90,7 @@ const CollectionsPageBags = () => {
   return (
     <div className={styles.flexContainer}>
       {items.map(item => (
-        <div className={styles.collectionscard} key={item.id}>
+        <Link to={'/collections/bagdetail'} className={styles.collectionscard} key={item.id}>
           <img className={styles.itemimages} src={item.image} alt="img" />
           <div className={styles.cardtexts}>
             <h3 className={styles.cardtitles}>{item.title}</h3>
@@ -99,7 +100,7 @@ const CollectionsPageBags = () => {
               <h4 className={styles.price}>{item.num}</h4>
             </span>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

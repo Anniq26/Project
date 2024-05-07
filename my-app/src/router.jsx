@@ -7,6 +7,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import OffersPage from "./pages/OffersPage";
 import MadeByUPage from "./pages/MadeByUPage";
+import BagDetail from "./components/BagDetail";
 
 
 
@@ -44,6 +45,10 @@ const router = [
                 element:<MadeByUPage/>,
                 path:'/madebyu'
             },
+            {
+                element:<BagDetail/>,
+                path:'collections/bagdetail'
+            }
         ]
     }
 ]
