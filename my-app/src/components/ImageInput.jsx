@@ -34,7 +34,7 @@ const ImageInput = () => {
               <img className={styles.selectedimg} src={URL.createObjectURL(image)} alt="Selected" />
             ) : (
               <>
-                <img src={imgUpload} className={styles.addimage} alt="Add a photo" />
+                <img src={imgUpload} className={styles.addimage} alt="img" />
                 <p>ატვირთე სასურველი ფოტო</p>
               </>
             )}

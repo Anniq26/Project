@@ -95,8 +95,6 @@ const items = [
   ];
   
 
-  const initialDisplayedIds = [1, 2, 3, 9];
-
   const imgArray = [
       { id: 1, img: imgOne },
       { id: 2, img: imgTwo },
@@ -110,9 +108,7 @@ const items = [
       { id: 3, color:'ჩანთის ფერი: თეთრი' , material:'ჩანთის ქსოვილი: ტილო', size:'ჩანთის ზომა: 32X45' },
   ];
   
-  const BagDetail = () => {
-      const [displayedIds, setDisplayedIds] = useState(initialDisplayedIds);
-  
+  const BagDetail = () => {  
       const [startIndex, setStartIndex] = useState(0);
 
       const showNext = () => {
@@ -139,7 +135,7 @@ const items = [
               <div className={styles.maincontentwrp}>
                   <div className={styles.imgarray}>
                       {imgArray.map(item => (
-                          <img key={item.id} src={item.img} alt={`Image ${item.id}`} />
+                          <img key={item.id} src={item.img} alt={item.id} />
                       ))}
                   </div>
                   <div className={styles.imgdetailmainwrp}>

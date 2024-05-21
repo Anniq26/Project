@@ -13,7 +13,7 @@ const items = [
 
 const TextInput = () => {
     const [values, setValues] = useState(items.map(() => ''));
-    const [editingIndex, setEditingIndex] = useState(-1);
+    const [setEditingIndex] = useState(-1);
 
     const handleChange = (e, index) => {
         const newValues = [...values];

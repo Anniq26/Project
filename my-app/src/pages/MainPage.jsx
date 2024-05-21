@@ -1,6 +1,5 @@
 import React from "react";
 import styles from '../mainpgstyles.module.css';
-import { Link, NavLink } from "react-router-dom";
 import MainPageItemscopy from "../components/MainPageItemscopy";
 import imgLabel from '../style/Component 2.webp';
 import imgMain from '../style/mainimg.webp';

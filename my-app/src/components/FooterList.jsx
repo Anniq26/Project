@@ -1,12 +1,9 @@
 import React from "react";
-import phoneImg from '../style/phone.webp';
-import mailImg from '../style/mail.webp';
 import instaImg from '../style/instagram.webp';
 import fbImg from '../style/facebook.webp';
 import imgBarcode from '../style/barcode.png';
 import styles from '../headerfooterpgstyles.module.css';
 import { Link } from "react-router-dom";
-import ContactPage from "../pages/ContactPage";
 
 const FooterItems = [
   { id: 1, title: 'მობილურის ნომერი:', number: '+995 574 085 413' },

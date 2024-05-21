@@ -7,7 +7,7 @@ const Messages = () => {
 
   return (
     <div className={styles.messagescont}>
-        <img className={styles.messages} src={imgMessages} alt="messenger" />
+        <img className={styles.messages} src={imgMessages} alt="img" />
     </div>
   )
 }

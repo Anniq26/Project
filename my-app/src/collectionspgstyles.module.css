@@ -7,7 +7,7 @@
 
 .messagescont {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: fit-content;
   z-index: 1000;
   position: fixed;
@@ -96,7 +96,7 @@
 
 .collecsecbtn{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: Hug (146px)px;
   height: Hug (24px)px;
   top: 1338px;

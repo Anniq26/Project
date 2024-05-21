@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import styles from '../collectionspgstyles.module.css';
 import CollectionsPageBags from '../components/CollectionsPageBags';
 import imgLeftArrow from '../style/arrowleft.png';
@@ -14,7 +14,7 @@ import ProductStatusFilter from '../components/ProductStatusFilter';
 import ClearFilter from '../components/ClearFilter';
 
 const CollectionsPage = () => {
-  const [filters, setFilters] = useState([]);
+  const [ setFilters] = useState([]);
 
   const handleClearFilters = () => {
     setFilters([]);
