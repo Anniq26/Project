@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from '../collectionspgstyles.module.css';
 import CollectionsPageBags from '../components/CollectionsPageBags';
 import imgLeftArrow from '../style/arrowleft.png';
 import imgRigtArrow from '../style/arrowright.png';
 import imgArr from '../style/arr.png';
-import imgFilter from '../style/tune.png'
+import imgFilter from '../style/tune.png';
 import PriceFilter from '../components/PriceFilter';
 import ColorFilters from '../components/ColorFilter';
 import TypeFilters from '../components/TypeFilters';
@@ -15,10 +15,15 @@ import ClearFilter from '../components/ClearFilter';
 
 const CollectionsPage = () => {
   const [ setFilters] = useState([]);
+  // const [filters, setFilters] = useState([]); this will work when we merge back
+  
 
-  const handleClearFilters = () => {
-    setFilters([]);
+
+  const clearFilters = () => {
+    console.log('Clearing filters...');
+    setFilters([]); // Clear the filters
   };
+
 
   return (
     <div>
@@ -36,7 +41,8 @@ const CollectionsPage = () => {
           <TypeFilters/>
           <VisualFilters/>
           <ProductStatusFilter/>
-          <ClearFilter onClick={handleClearFilters} />
+          {/* Pass handleClearFilters as onClick prop to ClearFilter */}
+          <ClearFilter onClick={clearFilters} />
         </div>
         <div className={styles.collectionssecone}>
           <div className={styles.collectionsbags}>

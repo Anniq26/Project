@@ -14,7 +14,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: fit-content;
+  width: auto;
   gap: 14px;
   margin-left: 250px;
   padding: 28px 456px 35px 108px ;
@@ -38,7 +38,6 @@
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   gap: 52px;
 }

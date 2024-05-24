@@ -83,7 +83,7 @@ const MainPage = () => {
             <div className={styles.sectionsecond}>
                 <h2 className={styles.secondtitle}>თვის ფასდაკლებები</h2>
                 <SalesBag />
-                <button onClick={() => handleClick('/offers')} className={styles.more}>მეტის ნახვა 
+                <button onClick={() => handleClick('/collections/offers')} className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />
                 </button>
             </div>

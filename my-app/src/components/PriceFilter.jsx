@@ -8,12 +8,14 @@ const priceFilters = [
   { label: 'ფასდაკლების მიხედვით', min: 10, text1: '%-დან', max: 50, text2: '%-ის ჩათვლით' },
 ];
 
-const PriceFilter = ({ filter }) => {
+const PriceFilter = ({ filter, setFilter }) => {
   const { label, min, max, text1, text2 } = filter;
   const [priceRange, setPriceRange] = useState([min, max]);
 
   const handlePriceChange = (range) => {
     setPriceRange(range);
+    // Call the setFilter function to update the filter
+    setFilter(range);
   };
 
   return (
@@ -40,10 +42,16 @@ const PriceFilter = ({ filter }) => {
 };
 
 const PriceFilters = () => {
+  // Function to handle filter changes
+  const setFilter = (range) => {
+    // Your logic to apply the filter...
+    console.log('Applying price filter:', range);
+  };
+
   return (
     <div className={styles.filterstyle}>
       {priceFilters.map((filter, index) => (
-        <PriceFilter key={index} filter={filter} />
+        <PriceFilter key={index} filter={filter} setFilter={setFilter} />
       ))}
     </div>
   );

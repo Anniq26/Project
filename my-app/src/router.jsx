@@ -1,7 +1,6 @@
 import React from "react";
 import MainPage from "./pages/MainPage";
 import LinkLayout from "./layouts/LinkLayout";
-import { Link, Route, Routes } from "react-router-dom";
 import CollectionsPage from "./pages/CollectionsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
