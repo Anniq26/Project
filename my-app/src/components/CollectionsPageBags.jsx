@@ -1,109 +1,56 @@
-import React from 'react';
-import imgBagone from '../style/bagone.png';
-import imgBagtwo from '../style/bagtwo.png';
-import imgBagthree from '../style/bagthree.png';
-import imgBagfour from '../style/bagfour.png';
-import imgBagfive from '../style/bagfive.png';
-import imgBagsix from '../style/bagsix.png';
-import imgBagseven from '../style/bagseven.png';
-import imgBageight from '../style/bageight.png';
-import imgBagnine from '../style/bagnine.png';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Assuming you are using react-router-dom for navigation
 import styles from '../collectionspgstyles.module.css';
-import { Link } from 'react-router-dom';
-
-const items = [
-  {
-    id: 1,
-    image: imgBagone,
-    title: 'სახელწოდება: ჟირაფი',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ჩანთის ფასი: ",
-    num: "35₾"
-  },
-  {
-    id: 2,
-    image: imgBagtwo,
-    title: 'სახელწოდება: ფისო',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ჩანთის ფასი: ",
-    num: "35₾"
-  },
-  {
-    id: 3,
-    image: imgBagthree,
-    title: 'სახელწოდება: SHhhh!',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ჩანთის ფასი: ",
-    num: "35₾"
-  },
-  {
-    id: 4,
-    image: imgBagfour,
-    title: 'სახელწოდება: სკა',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ჩანთის ფასი: ",
-    num: "35₾"
-  },
-  {
-    id: 5,
-    image: imgBagfive,
-    title: 'სახელწოდება: ფისუნია',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ფასდაკლებით: ",
-    num: '60₾'
-  },
-  {
-    id: 6,
-    image: imgBagsix,
-    title: 'სახელწოდება: სპანჯბობი',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ფასდაკლებით: ",
-    num: '60₾'
-  },
-  {
-    id: 7,
-    image: imgBagseven,
-    title: 'სახელწოდება: რთველი',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ფასდაკლებით: ",
-    num: '60₾'
-  },
-  {
-    id: 8,
-    image: imgBageight,
-    title: 'სახელწოდება: ეიფელის კოშკი',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ფასდაკლებით: ",
-    num: '60₾'
-  },
-  {
-    id: 9,
-    image: imgBagnine,
-    title: 'სახელწოდება: ფუტკრები',
-    size: "ჩანთის ზომა: 30X32",
-    price: "ჩანთის ფასი: ",
-    num: "35₾"
-  }
-];
 
 const CollectionsPageBags = () => {
-  return (
-    <div className={styles.flexContainer}>
-      {items.map(item => (
-        <Link to={'/collections/bagdetail'} className={styles.collectionscard} key={item.id}>
-          <img className={styles.itemimages} src={item.image} alt="img" />
-          <div className={styles.cardtexts}>
-            <h3 className={styles.cardtitles}>{item.title}</h3>
-            <h4 className={styles.cardtitles}>{item.size}</h4>
-            <span className={styles.spanstyle}>
-              <h4 className={styles.cardtitles} style={{ color: item.id >= 5 && item.id <= 8 ? '#EB000E' : '' }}>{item.price}</h4>
-              <h4 className={styles.price}>{item.num}</h4>
-            </span>
-          </div>
-        </Link>
-      ))}
-    </div>
-  );
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/bags/products/', {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error("response was not ok");
+                }
+                const result = await response.json();
+                setData(result);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p className={styles.error}>{error}</p>;
+    if (!data || data.results.length === 0) return <p>No data available</p>;
+
+    return (
+        <div className={styles.flexContainer}>
+            {data.results.map(({ id, name, width, length, description, category, price, image_urls }) => (
+                <Link to={`/collections/bagdetail/${id}`} className={styles.collectionscard} key={id}>
+                    <img className={styles.itemimages} src={image_urls[0].image} alt="img" />
+                    <div className={styles.cardtexts}>
+                        <h3 className={styles.cardtitles}>სახელწოდება: {name}</h3>
+                        <h4 className={styles.cardtitles}>ჩანთის ზომა: {width} x {length}</h4>
+                        <span className={styles.spanstyle}>
+                            <h4 className={styles.price}  style={{ color: id >= 7 && id <= 10 ? '#EB000E' : '' }}>{id >= 6 && id <= 10 ? 'ფასდაკლებით:' : 'ჩანთის ფასი:'}</h4>
+                            <h4 className={styles.cardtitles} style={{ color: id >= 7 && id <= 10 ? '#EB000E' : '' }}>{Math.floor(parseFloat(price))}₾</h4>
+                        </span>
+                    </div>
+                </Link>
+            ))}
+        </div>
+    );
 };
 
 export default CollectionsPageBags;

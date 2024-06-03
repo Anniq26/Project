@@ -1,66 +1,58 @@
-import React from 'react'
-import imgBagfive from '../style/bagfive.png';
-import imgBagsix from '../style/bagsix.png';
-import imgBagseven from '../style/bagseven.png';
-import imgBageight from '../style/bageight.png';
+import React, { useEffect, useState } from 'react';
 import styles from '../mainpgstyles.module.css';
+import { Link } from 'react-router-dom';
 
-const items = [
-    {
-      id: 1,
-      image: imgBagfive,
-      title: 'სახელწოდება: ფისუნია',
-      size: "ჩანთის ზომა: 30X32",
-      price: "ფასდაკლებით: ",
-      num:'60₾'
-    },
-    {
-      id: 2,
-      image: imgBagsix,
-      title: 'სახელწოდება: სპანჯბობი',
-      size: "ჩანთის ზომა: 30X32",
-      price: "ფასდაკლებით: ",
-      num:'60₾'
-    },
-    {
-      id: 3,
-      image: imgBagseven,
-      title: 'სახელწოდება: რთველი',
-      size: "ჩანთის ზომა: 30X32",
-      price: "ფასდაკლებით: ",
-      num:'60₾'
-    },
-    {
-      id: 4,
-      image: imgBageight,
-      title: 'სახელწოდება: ეიფელის კოშკი',
-      size: "ჩანთის ზომა: 30X32",
-      price: "ფასდაკლებით: ",
-      num:'60₾'
-    }      
-]
+const SalesBag = () => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/bags/products/', {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error("response was not ok");
+                }
+                const result = await response.json();
+                setData(result);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p className={styles.error}>{error}</p>;
+    if (!data || data.results.length === 0) return <p>No data available</p>;
 
+    const firstFourProducts = data.results.slice(4, 8);
 
-export const SalesBag = () => {
-  return (
-    <div className={styles.flexContainer}>
-        {items.map(item => (
-            <div className={styles.cardd} key={item.id}>
-                <img className={styles.itemimages} src={item.image} alt='img' />
-                <div className={styles.cardtexts}>
-                    <h3 className={styles.cardtitles}>{item.title}</h3>
-                    <h4 className={styles.cardtitles}>{item.size}</h4>
-                    <span className={styles.spanstyle}>
-                    <h4 className={styles.sale}>{item.price}</h4>
-                    <h4 className={styles.price}>{item.num}</h4>
-                    </span>
-                </div>
-            </div>
-        ))}
-    </div>
-  )
-}
+    return (
+        <div className={styles.flexContainer}>
+            {firstFourProducts.map(({ id, name, width, length, description, category, price, image_urls }) => (
+                <Link to={`/collections/bagdetail/${id}`}  className={styles.cardd} key={id}>
+                    <img className={styles.itemimages}  src={image_urls[0].image} alt="img" />
+                    <div className={styles.cardtexts}>
+                        <h3 className={styles.cardtitles}> სახელწოდება: {name}</h3>
+                        <h4 className={styles.cardtitles}>ჩანთის ზომა: {width} x {length}</h4>
+                        <span className={styles.spanstyle}>
+                        <h4 className={styles.sale}>ფასდაკლებით:</h4>
+                        <h4 className={styles.price}>{Math.floor(parseFloat(price))}₾</h4>
+                        </span>
+                    </div>
+                </Link>
+            ))}
+        </div>
+    );
+};
 
-export default SalesBag
+export default SalesBag;

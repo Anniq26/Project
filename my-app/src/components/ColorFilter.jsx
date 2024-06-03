@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import styles from '../colorfilter.module.css';
 
-const ColorFilters = () => {
+const ColorFilters = ({ onFilterChange }) => {
   const [filters, setFilters] = useState([]);
 
   const colors = ['#FCCA46', '#FBBEAC', '#7A9278', '#75949E', '#233D4D', '#F0F0F0', '#000000'];
 
   const handleSetFilters = (selectedColor) => {
-    setFilters([...filters, selectedColor]);
+    const updatedFilters = [...filters, selectedColor];
+    setFilters(updatedFilters);
+    if (onFilterChange) {
+      onFilterChange(updatedFilters); // Notify parent component about filter change
+    }
   };
 
   return (
@@ -23,7 +27,6 @@ const ColorFilters = () => {
                 />
             ))}
         </div>
-        <p>Selected Filters: {filters.join(', ')}</p>
     </div>
   );
 };

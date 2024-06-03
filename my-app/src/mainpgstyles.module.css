@@ -201,6 +201,7 @@
   border-radius: 15px; 
   border: 1px solid #051126; 
   opacity: 0px;
+  text-decoration: none;
 }
 .itemimages {
   width: fit-content;

@@ -45,8 +45,8 @@ const router = [
                 path:'/madebyu'
             },
             {
-                element:<BagDetail/>,
-                path:'collections/bagdetail'
+                element: <BagDetail />,
+                path: 'collections/bagdetail/:id'
             }
         ]
     }

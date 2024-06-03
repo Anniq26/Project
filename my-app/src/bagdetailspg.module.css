@@ -70,7 +70,7 @@
   border-radius: 15px;
 }
 .imgdetailmain {
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   gap: 24px;
 
@@ -188,8 +188,8 @@ color: #000000;
   padding: 16px 108px ;
   }
   .itemimages {
-    width: fit-content;
-    height: auto;
+    width: Hug(288px);
+    height: 200px;
     cursor: pointer;
     }
     .cardtexts{

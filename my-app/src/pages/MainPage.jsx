@@ -1,12 +1,12 @@
 import React from "react";
 import styles from '../mainpgstyles.module.css';
-import MainPageItemscopy from "../components/MainPageItemscopy";
 import imgLabel from '../style/Component 2.webp';
 import imgMain from '../style/mainimg.webp';
 import CustomDesignSection from "../components/CustomDesignSection"; 
 import SalesBag from "../components/SalesBag";
 import imgEclipseone from '../style/Ellipse 3.png';
 import imgEclipsetwo from '../style/Ellipse 3.png';
+import MainPageItems from "../components/MainPageItems";
 
 
 
@@ -70,7 +70,7 @@ const MainPage = () => {
             <div className={styles.sectionsecond}>
                 <h2 className={styles.secondtitle}> ქინას პოპულარული ჩანთები</h2>
                 <div className={styles.sectwoitems}>
-                    <MainPageItemscopy />
+                    <MainPageItems />
                 </div>
                 <button onClick={() => handleClick('/collections')} className={styles.more}>მეტის ნახვა 
                 <img src={imgLabel} alt="label" />

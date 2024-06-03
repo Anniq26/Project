@@ -216,10 +216,11 @@ border: 1px solid #051126;
 opacity: 0px;
 }
 .itemimages {
-width: fit-content;
-height: auto;
-cursor: pointer;
+  width: Hug(288px);
+  height: 200px;
+  cursor: pointer;
 }
+
 
 
 .spanimages{

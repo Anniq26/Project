@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  product:
+    volumes:
+      - static:/static
+    env_file:
+      - .env
+    build:
+      context: ./product
+    ports:
+      - "8000:8000"
+
+  my-app:
+    build:
+      context: ./my-app
+    volumes:
+      - my-app:/app/build
+    ports:
+      - "3000:3000"
+
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - static:/static
+      - my-app:/var/www/my-app
+    ports:
+      - "80:80"
+    depends_on:
+      - product
+      - my-app
+
+volumes:
+  static:
+  my-app:
