@@ -14,16 +14,51 @@ import ProductStatusFilter from '../components/ProductStatusFilter';
 import ClearFilter from '../components/ClearFilter';
 
 const CollectionsPage = () => {
-  const [ setFilters] = useState([]);
-  // const [filters, setFilters] = useState([]); this will work when we merge back
-  
+  const [priceRange, setPriceRange] = useState([0, Infinity]); // State for price range
+  const [colorFilters, setColorFilters] = useState([]); // State for color filters
+  const [typeFilters, setTypeFilters] = useState([]); // State for type filters
+  const [visualFilters, setVisualFilters] = useState([]); // State for visual filters
+  const [productStatus, setProductStatus] = useState(null); // State for product status
 
-
-  const clearFilters = () => {
-    console.log('Clearing filters...');
-    setFilters([]); // Clear the filters
+  // Function to handle price range changes
+  const handlePriceRangeChange = (range) => {
+    console.log('Selected price range:', range);
+    setPriceRange(range);
   };
 
+  // Function to handle color filter changes
+  const handleColorFilterChange = (filters) => {
+    console.log('Selected color filters:', filters);
+    setColorFilters(filters);
+  };
+
+  // Function to handle type filter changes
+  const handleTypeFilterChange = (filters) => {
+    console.log('Selected type filters:', filters);
+    setTypeFilters(filters);
+  };
+
+  // Function to handle visual filter changes
+  const handleVisualFilterChange = (filters) => {
+    console.log('Selected visual filters:', filters);
+    setVisualFilters(filters);
+  };
+
+  // Function to handle product status filter change
+  const handleProductStatusChange = (status) => {
+    console.log('Selected product status:', status);
+    setProductStatus(status);
+  };
+
+  // Function to clear all filters
+  const clearFilters = () => {
+    console.log('Clearing all filters...');
+    setPriceRange([0, Infinity]);
+    setColorFilters([]);
+    setTypeFilters([]);
+    setVisualFilters([]);
+    setProductStatus(null);
+  };
 
   return (
     <div>
@@ -36,17 +71,22 @@ const CollectionsPage = () => {
       <div className={styles.collectionspage}>
         <div className={styles.filter}>
           <h5 className={styles.allfilterstitle}>მოძებნე უფრო მარტივად <img src={imgFilter} alt='img'/></h5>
-          <PriceFilter/>
-          <ColorFilters/>
-          <TypeFilters/>
-          <VisualFilters/>
-          <ProductStatusFilter/>
-          {/* Pass handleClearFilters as onClick prop to ClearFilter */}
+          <PriceFilter setFilter={handlePriceRangeChange} />
+          <ColorFilters setFilter={handleColorFilterChange} />
+          <TypeFilters setFilter={handleTypeFilterChange} />
+          <VisualFilters setFilter={handleVisualFilterChange} />
+          <ProductStatusFilter setFilter={handleProductStatusChange} />
           <ClearFilter onClick={clearFilters} />
         </div>
         <div className={styles.collectionssecone}>
           <div className={styles.collectionsbags}>
-            <CollectionsPageBags/>
+            <CollectionsPageBags 
+              priceRange={priceRange} 
+              colorFilters={colorFilters} 
+              typeFilters={typeFilters} 
+              visualFilters={visualFilters} 
+              productStatus={productStatus} 
+            />
           </div>
           <div className={styles.collecsecbtn}>
             <p>ყველა</p>

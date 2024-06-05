@@ -7,7 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import OffersPage from "./pages/OffersPage";
 import MadeByUPage from "./pages/MadeByUPage";
 import BagDetail from "./components/BagDetail";
-
+import RegisteredSuccessfuly from "./components/registeredSuccessfuly";
 
 
 const router = [
@@ -47,6 +47,10 @@ const router = [
             {
                 element: <BagDetail />,
                 path: 'collections/bagdetail/:id'
+            },
+            {
+                element: <RegisteredSuccessfuly />,
+                path: '/registered'
             }
         ]
     }
