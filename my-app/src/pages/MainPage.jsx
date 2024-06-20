@@ -1,6 +1,5 @@
 import React from "react";
 import styles from '../mainpgstyles.module.css';
-import imgLabel from '../style/Component 2.webp';
 import imgMain from '../style/salemain.png';
 import CustomDesignSection from "../components/CustomDesignSection"; 
 import SalesBag from "../components/SalesBag";
@@ -10,10 +9,6 @@ import imgBorder from '../style/Rectangle 64.png';
 import { Link } from "react-router-dom";
 
 
-
-const handleClick = (route) => {
-    window.open(route, '_self');
-};
 
 const MainPage = () => {
 return (
@@ -51,19 +46,18 @@ return (
         <CustomDesignSection />
     </div>
 </div>
-          
+<div className={styles.sectionsecondwrapper}>       
     <div className={styles.sectionsecond}>        
         <Link to={'/sales'} className={styles.secondtitle}>
             <h2 className={styles.secondtitle}>ფასდაკლებები</h2>
         </Link>
    
-                <SalesBag />
-                <button onClick={() => handleClick('/collections/offers')} className={styles.more}>მეტის ნახვა 
-                <img src={imgLabel} alt="label" />
-                </button>
+        <SalesBag />
+
             </div>
         </div>
     </div>
+</div>
     );
 }
 

@@ -218,15 +218,14 @@
 
 }
 .cardd {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background: #F0F0F0;
   width: 288px;
-  height: 321px;
+  height: 433px;
+  top: 1104px;
+  left: 108px;
   gap:8px ;
   justify-content: center;
   border-radius: 15px; 
@@ -325,8 +324,4 @@
     .spanimages {
       width: 90%;
     }}
-
-
-
-
 

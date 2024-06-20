@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../collectionspgstyles.module.css';
 import CollectionsPageBags from '../components/CollectionsPageBags';
-import imgLeftArrow from '../style/arrowleft.png';
-import imgRigtArrow from '../style/arrowright.png';
 import imgArr from '../style/arr.png';
 import imgFilter from '../style/tune.png';
 import PriceFilter from '../components/PriceFilter';
@@ -88,11 +86,7 @@ const CollectionsPage = () => {
               productStatus={productStatus} 
             />
           </div>
-          <div className={styles.collecsecbtn}>
-            <p>ყველა</p>
-            <button className={styles.collecbutton}><img  className={styles.collecsecbtnimg} src={imgLeftArrow} alt="img" /></button>
-            <button className={styles.collecbutton}><img  className={styles.collecsecbtnimg} src={imgRigtArrow} alt="img" /></button>
-          </div>
+         
         </div>
       </div>
     </div>

@@ -67,30 +67,31 @@
   justify-content: center;
   width: 100%;
   height: auto;
+  gap: 24px;
 }
 
 .collectionsbags {
   display: flex;
-  flex-wrap: wrap;
   width: 960px;
   height: 1056px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
 }
 
 .collectionscard { 
-  width: calc((100% - 48px) / 3); /* Adjusted width */
-  height: 320px;
-  padding: 5px 0;
-  border-radius: 15px;
-  border: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background: #F0F0F0; 
-  border: 1px solid #051126;
+  padding: 0 20px;
+  width: 288px;
+  height: 433px;
+  top: 1104px;
+  left: 108px;
+  gap:8px ;
+  justify-content: center;
+  border-radius: 15px; 
+  opacity: 0px;
   text-decoration: none;
 }
 
@@ -121,20 +122,19 @@
 .spanstyle {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
   gap: 5px;
+  margin-top: 12px;
 }
 .price {
-font-family: Helvetica Neue LT GEO;
-font-size: 14px;
-font-weight: 500;
-line-height: 16px;
-text-align: left;
-color: #051126;
-font-family: Helvetica Neue LT GEO;
-font-size: 14px;
-font-weight: 400;
-line-height: 16.9px;
-text-align: left;
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48.28px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #000000;
 }
 
 .sale {
@@ -155,16 +155,17 @@ color: #EB000E;
   text-align: center;
   margin-top: 10px;
   color: #7dacca;
-
+  width: 100%;
 }
 
 .cardtitles {
-font-family: Helvetica Neue LT GEO;
-font-size: 14px;
-font-weight: 300;
-line-height: 16.9px;
-text-align: left;
-color: #051126;
+  font-family:  'Helvetica Neue LT GEO', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.8px;
+  letter-spacing: 0.01em;
+  text-align: left;   
+  color: #000000;
 }
 
 
@@ -187,16 +188,16 @@ background-color: #FFFFFF;
 }
 
 .flexContainer {
-display: flex;
-flex-wrap: wrap; 
-justify-content: center;
-align-items: center; 
-width: auto;
-height: auto;
-gap: 20px; 
-top: 779px;
-padding: 16px 108px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  width: 936px; /* (3 * 288px) + (2 * 28px) = 936px */
+  height: auto;
+  gap: 28px; /* Gap between the items */
+  margin: 0 auto; /* Center the container horizontally */
 }
+
 .cardd {
 flex: 0 1 21%; 
 display: flex;
@@ -205,23 +206,30 @@ align-items: center;
 padding: 0 20px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 background: #F0F0F0;
-width: 288px;
-height: 321px;
-top: 799px;
-left: 108px;
+width: fixed(288px)px;
+height: fixed(433px)px;
+top: 265px;
+left: 420px;
 gap:8px ;
 justify-content: center;
 border-radius: 15px; 
 border: 1px solid #051126; 
 opacity: 0px;
 }
-.itemimages {
-  width: Hug(288px);
-  height: 200px;
-  cursor: pointer;
+.colitemimgwrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px; /* Fixed width */
+  height: 240px; /* Fixed height */
+  overflow: hidden; /* Hide overflow to ensure all images fit within the container */
 }
 
-
+.itemimages {
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover; /* Ensure images cover the entire container while maintaining aspect ratio */
+}
 
 .spanimages{
 display: flex;
@@ -339,4 +347,163 @@ top: 60px;
 left: 1044px;
 gap: 0px;
 opacity: 0px;
+}
+
+
+/* sales */
+
+.sizetitles{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.73px;
+  text-align: left;
+  color: #555555;
+}
+
+/* sales */
+.salescardwrp2{
+  display: flex;
+  flex-direction: column;
+  width: 391px;
+  height: 315px;
+  border-radius: 10px;
+  opacity: 0px;
+  background-color: #D9D9D9; 
+}
+
+.salescard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 391px;
+  height: 298px;
+  top: 2355px;
+  left: 109px;
+  gap: 45px;
+}
+
+.salessizetitles{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #555555;
+}
+.priceold{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.55px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+  text-decoration: line-through;
+}
+
+.pricenew{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.55px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+}
+
+.salestexts{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: hug(174px)px;
+  height: hug(315px)px;
+  margin-left: 40px;
+  gap: 36px;
+  padding-top: 24px;
+}
+
+.salestextspt2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 142px;
+  height: 99px;
+  top: 2467px;
+  left: 326px;
+  opacity: 0px;
+}
+
+.salesspanprice{
+  display: flex;
+  flex-direction: row;
+  width: 142px;
+  height: 99px;
+  gap: 12px;
+}
+
+.salesflexContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: auto;
+  height: auto;
+  gap: 28px;
+  
+}
+
+.salesitemimageswrp{
+  display: flex;
+  width: 175px;
+  height: 207.07px;  
+  cursor: pointer;
+}
+.salesitemimages{
+  width: fit-content;
+  height: auto;
+}
+
+.saleperc{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48.28px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding:  4px 11px;
+  color: #FFFFFF;
+  background-color: #E32B39;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  margin-right: 0px;
+}
+
+.salescardwrp{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  
+}
+.salescardtexts{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  color: #7dacca;
+}
+.salesimgborderwrp{
+  display: flex;
+  align-items: flex-end;
+  width: 391px;
+  height: auto;
+}
+.salesimgborder{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
 }

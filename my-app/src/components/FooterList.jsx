@@ -63,8 +63,9 @@ const FooterList = () => {
             ))}            
           </div>
         </div>
-        <img className={styles.imgbarcode} src={imgBarcode} alt="img" />
+
       </div>
+      <img className={styles.imgbarcode} src={imgBarcode} alt="img" />
     </div>
   )
 }

@@ -9,7 +9,8 @@
 .contactspage{ 
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 35px;
   width: 100%;
   height: auto;
@@ -25,7 +26,7 @@
   gap: 14px;
   margin-left: 250px;
   padding: 28px 456px 35px 108px ;
-  width: auto;
+  width: 1224px;
 }
 .contactsplink{ 
   font-family: Helvetica Neue LT GEO;
@@ -44,7 +45,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: 1224px;
   flex-direction: row;
   gap: 128px;
 
@@ -66,7 +67,7 @@
 .contactstext{
   display: flex;
   flex-direction: column;
-  width: Hug (474px)px;
+  width: 474px;
   height: auto;
   left: 836px;
   gap: 10px;
@@ -74,9 +75,9 @@
 }
 
 .contacttitle {
-  font-family: Helvetica Neue LT GEO;
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 900;
   line-height: 26.55px;
   text-align: left;
   color: #000000;
@@ -102,7 +103,17 @@
   font-weight: 400;
   line-height: 21.73px;
   text-align: left;
-
+}
+.aboutustext{
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  width: 454px;
+  height: auto;
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 18px;
+  font-weight: 900px;
+  line-height: 21.73px;
 }
 .phonenmblink{
   text-decoration: none;

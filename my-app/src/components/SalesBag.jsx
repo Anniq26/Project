@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../collectionspgstyles.module.css';
 import { Link } from 'react-router-dom';
+import imgCardBorder from '../style/Rectangle 84.png';
+
 
 const SalesBag = () => {
     const [data, setData] = useState(null);
@@ -34,24 +36,39 @@ const SalesBag = () => {
     if (error) return <p className={styles.error}>{error}</p>;
     if (!data || data.results.length === 0) return <p>No data available</p>;
 
-    const firstFourProducts = data.results.slice(4, 8);
+    const firstFourProducts = data.results.slice(4, 7);
 
     return (
-        <div className={styles.flexContainer}>
-            {firstFourProducts.map(({ id, name, width, length, description, category, price, image_urls }) => (
-                <Link to={`/collections/bagdetail/${id}`}  className={styles.cardd} key={id}>
-                    <img className={styles.itemimages}  src={image_urls[0].image} alt="img" />
-                    <div className={styles.cardtexts}>
-                        <h3 className={styles.cardtitles}> სახელწოდება: {name}</h3>
-                        <h4 className={styles.cardtitles}>ჩანთის ზომა: {width} x {length}</h4>
-                        <span className={styles.spanstyle}>
-                        <h4 className={styles.sale}>ფასდაკლებით:</h4>
-                        <h4 className={styles.price}>{Math.floor(parseFloat(price))}₾</h4>
-                        </span>
+    <div className={styles.salesflexContainer}>
+        {firstFourProducts.map(({ id, name, width, length, description, category, price, image_urls }) => (
+            <Link to={`/collections/bagdetail/${id}`}  className={styles.salescardwrp} key={id}>
+                <div className={styles.salescardwrp2}>
+                    <div className={styles.salescard}>
+                        <div className={styles.salesitemimageswrp} >
+                        <img className={styles.salesitemimages} src={image_urls[0].image} alt="img" />
+                        </div>
+                        <div className={styles.salestexts}>
+                            <h2  className={styles.saleperc}>-30%</h2>  
+                            <div className={styles.salestextspt2}>
+                                <span className={styles.salesspanprice}>
+                                    <h4 className={styles.pricenew}>{Math.floor(parseFloat(price))}₾</h4>
+                                    <h4 className={styles.priceold}>115₾</h4>
+                                </span>
+                                <div className={styles.salescardtexts}>
+                                    <h3 className={styles.salessizetitles}> {name}</h3>
+                                    <p className={styles.salessizetitles}>{Math.floor(parseFloat(width))}X{Math.floor(parseFloat(length))}</p>
+                                </div>
+                            </div>
+                        </div>
+                    
                     </div>
-                </Link>
-            ))}
-        </div>
+                    <div className={styles.salesimgborderwrp}>
+                            <img src={imgCardBorder} alt="img" className={styles.salesimgborder}/>
+                    </div>
+                </div>
+            </Link>
+        ))}
+    </div>
     );
 };
 

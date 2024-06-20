@@ -28,7 +28,7 @@ const AboutUsPage = () => {
         {aboutUsInfo.map(({title, content}) => (
             <div className={styles.contentwrapper}>
             <h2 className={styles.contacttitle}>{title}</h2>
-            <p className={styles.phonenmbp}>{content}</p>
+            <p className={styles.aboutustext}>{content}</p>
             </div>
         ))}
       </div>        
