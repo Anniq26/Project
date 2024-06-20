@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../mainpgstyles.module.css';
+import styles from '../collectionspgstyles.module.css';
 import { Link } from 'react-router-dom';
 
 const SalesBag = () => {

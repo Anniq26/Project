@@ -1,14 +1,13 @@
 import React from "react";
 import MainPage from "./pages/MainPage";
 import LinkLayout from "./layouts/LinkLayout";
-import CollectionsPage from "./pages/CollectionsPage";
+import CollectionsPage from "./pages/SalesPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import OffersPage from "./pages/OffersPage";
 import MadeByUPage from "./pages/MadeByUPage";
 import BagDetail from "./components/BagDetail";
 import RegisteredSuccessfuly from "./components/registeredSuccessfuly";
-import SalesPage from "./pages/SalesPage";
 
 
 const router = [
@@ -53,14 +52,6 @@ const router = [
                 element: <RegisteredSuccessfuly />,
                 path: '/registered'
             }
-            ,
-            {
-                element: <SalesPage />,
-                path: '/sales'
-            }
-
-
-            
         ]
     }
 ]

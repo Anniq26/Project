@@ -4,8 +4,8 @@ import styles from '../headerfooterpgstyles.module.css'; // Adjust the path to y
 
 const HeaderFrame = () => {
     return (
-        <div className={styles.headerFrame}>
-       დამზადებულია სიყვარულით, ქინასგან        </div>
+    <div className={styles.headerFrame}>
+    </div>
     );
 };
 

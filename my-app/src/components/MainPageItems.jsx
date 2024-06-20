@@ -41,14 +41,14 @@ const MainPageItems = () => {
         <div className={styles.flexContainer}>
             {firstFourProducts.map(({ id, name, width, length, description, category, price, image_urls }) => (
                <Link to={`/collections/bagdetail/${id}`}  className={styles.cardd} key={id}>
+                    <span className={styles.spanstyle}>
+                        <h4 className={styles.pricetitles}>{Math.floor(parseFloat(price))}₾</h4>
+                    </span>
                     <img className={styles.itemimages}  src={image_urls[0].image} alt="img" />
                     <div className={styles.cardtexts}>
-                        <h3 className={styles.cardtitles}> სახელწოდება: {name}</h3>
-                        <h4 className={styles.cardtitles}>ჩანთის ზომა: {width} x {length}</h4>
-                        <span className={styles.spanstyle}>
-                        <h4 className={styles.cardtitles}>ჩანთის ფასი:</h4>
-                        <h4 className={styles.cardtitles}>{Math.floor(parseFloat(price))}₾</h4>
-                        </span>
+                        <h3 className={styles.cardtitles}> {name}</h3>
+                        <h4 className={styles.sizetitles}>ტილო{Math.floor(parseFloat(width))}X{Math.floor(parseFloat(length))}</h4>
+
                     </div>
                 </Link>
             ))}

@@ -18,10 +18,21 @@
     padding: 32px 108px 32px 108px;
     gap: 29px;
     background-color: #FFFFFF;
-    
+    z-index: 2
   }
 
 
+/* pageslinks */
+
+  .pageslinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: hug(1224px)px;
+    height: auto;
+    padding: 20px;
+    margin: 26px 0;
+  }
   .linksstyle {
     height: fixed 24px;
     display: flex;
@@ -30,12 +41,25 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
- transition: color 0.3s;  }
- .activeLink:focus {
-  border-bottom: 4px solid rgba(0, 0, 0, 1);
-  color: #fcca46;
-}
+  transition: color 0.3s;  }
+  .activeLink:focus {
+    border-bottom: 4px solid rgba(0, 0, 0, 1);
+    color: #fcca46;
+  }
+.linkImg{
+  width: 136px;
+  height: 138px;
 
+}
+.linkcard{
+  width: 184px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 24px;
+  gap: 10px;
+  border-radius: 10px;
+}
   .link:not(:focus) {
     border-bottom: none;
   }
@@ -47,7 +71,7 @@
 
   .link,
   .linkimg{
-    font-family: Helvetica;
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 40px;
@@ -310,7 +334,7 @@ background-color: #FFFFFF;
     max-width: auto;
     max-height: fit-content;
     padding: 48px 108px;
-    background: linear-gradient(to bottom, #4E86A9, #1F3543); 
+    background: #B4D984; 
   }
 
   /* footer first part style */
@@ -333,7 +357,8 @@ background-color: #FFFFFF;
 .footeroneItems{
 display: flex;
 flex-direction: row;
-gap: 6px;
+justify-content: space-between;
+/* gap: 6px; */
 width: auto;
 height: auto;
 }
@@ -345,14 +370,14 @@ height: auto;
   font-weight: 500;
   line-height: 16.9px;
   text-align: left;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .footerlinks,
 .footerlinksptwo {
   font-family: Helvetica Neue LT GEO;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.9px;
@@ -383,9 +408,12 @@ height: auto;
 
 .footertwo{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 48px;
 }
+
+
+/* carddetails */
 .flexContainer {
   display: flex;
   flex-wrap: wrap; 
@@ -431,12 +459,10 @@ height: auto;
 }
 .headerFrame {
   width: 100%;
-  background: linear-gradient(180deg, #4E86A9 24.67%, #1F3543 78.71%);
-  color: white;
+  height: 48px;
+  background: #B4D984;
   text-align: center;
-  padding: 10px 0;
-  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
-
+  border-bottom: 23px;
 }
 .logoStyle {
   width: Hug (264px)px;
@@ -445,7 +471,8 @@ height: auto;
   left: 108px;
   gap: 10px;
   opacity: 0px;
-  
+  cursor: pointer;
+  z-index: 3;
 }
 .spanimages{
   display: flex;
@@ -459,29 +486,37 @@ height: auto;
 .searchwrp{
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 90px;
   justify-content: center;
+  position: absolute;
+  z-index: 2;
 }
 .searchForm {
-  width: 780px;
-  height: 40px;
   display: flex;
-  padding: 10px 18px;
-  gap: 16px;
-  border-radius: 25px;
-  background: rgba(216, 216, 216, 0.5);
-  border: 1px solid #0000001A;
-  opacity: 1;
-
+  width: 808px;
+  height: hug(70px)px;
+  gap: 11px;
+  padding: 23px 22px 23px ;
+  opacity: 0px;
+  border: solid 1px #000000;
+  border-radius: 15px;
+  cursor: text;
+  z-index: 1;
 }
 
 .searchInput {
+  display: flex;
+  width: 100%;
   flex-grow: 1;
   border: none;
   background: transparent; 
   color: black; 
   outline: none;
-
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.14px;
+  
 }
 .searchIcon {
   width: 20px; 
@@ -496,6 +531,8 @@ height: auto;
   align-items: center;
   justify-content: center;
 }
+
+/* new section */
 .customDesignSections {
   display: flex;
   flex-wrap: wrap;
@@ -590,3 +627,17 @@ color: white;
   color: #000000;
 }
 
+.modalclosebtnwrp{
+  display: flex;
+  width: 700px;
+  height: auto;
+  justify-content: flex-end;
+}
+
+.modalCloseButton{
+  width: 15px;
+  height: 15px;
+  border: solid 1px #6b6d6e59;
+  border-radius: 5px;
+  cursor: pointer;
+}

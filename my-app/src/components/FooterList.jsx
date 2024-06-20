@@ -1,6 +1,6 @@
 import React from "react";
-import instaImg from '../style/instagram.webp';
-import fbImg from '../style/facebook.webp';
+import instaImg from '../style/instagram.png';
+import fbImg from '../style/facebook.png';
 import imgBarcode from '../style/barcode.png';
 import styles from '../headerfooterpgstyles.module.css';
 import { Link } from "react-router-dom";

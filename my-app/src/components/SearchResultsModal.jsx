@@ -13,9 +13,11 @@ const SearchResultModal = ({ results, onClose, searchTerm }) => {
   return (
     <div className={styles.modalBackdrop}>
       <div className={styles.modalContent}>
+        <div className={styles.modalclosebtnwrp}>
         <button onClick={onClose} className={styles.modalCloseButton}>
           &times;
         </button>
+        </div>
         <div className={styles.modalBody}>
           {filteredResults.length > 0 ? (
             filteredResults.map((result) => (
@@ -32,6 +34,7 @@ const SearchResultModal = ({ results, onClose, searchTerm }) => {
           ) : (
             <p className={styles.modalText}>პროდუქტი არ მოიძებნა</p>
           )}
+          
         </div>
       </div>
     </div>
