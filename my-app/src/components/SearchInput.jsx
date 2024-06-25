@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import styles from '../headerfooterpgstyles.module.css';
+import { useNavigate } from 'react-router-dom';
+import styles from '../headerpgstyles.module.css';
 import imgSearch from '../style/search.webp';
-import SearchResultModal from './SearchResultsModal';
 
 const SearchInput = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -20,21 +19,17 @@ const SearchInput = () => {
         throw new Error('Failed to fetch search results');
       }
       const data = await response.json();
-      setSearchResults(data.results);
-      setModalOpen(true);
+      navigate('/search', { state: { searchResults: data.results, searchTerm } });
+      setSearchTerm(''); // Clear the input field
     } catch (error) {
       console.error('Error searching:', error.message);
     }
   };
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
   return (
-    <div>
+    <div className={styles.searchContainer}>
       <form onSubmit={handleSearchSubmit} className={styles.searchForm}>
-      <button type="submit" className={styles.searchButton}>
+        <button type="submit" className={styles.searchButton}>
           <img src={imgSearch} alt="Search" className={styles.searchIcon} />
         </button>
         <input
@@ -45,9 +40,6 @@ const SearchInput = () => {
           className={styles.searchInput}
         />
       </form>
-      {modalOpen && (
-        <SearchResultModal results={searchResults} onClose={closeModal} searchTerm={searchTerm} />
-      )}
     </div>
   );
 };

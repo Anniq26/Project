@@ -8,7 +8,7 @@ import OffersPage from "./pages/OffersPage";
 import MadeByUPage from "./pages/MadeByUPage";
 import BagDetail from "./components/BagDetail";
 import RegisteredSuccessfuly from "./components/registeredSuccessfuly";
-import SalesPage from "./pages/SalesPage";
+import SearchPage from "./pages/SearchPage";
 
 
 const router = [
@@ -55,12 +55,9 @@ const router = [
             }
             ,
             {
-                element: <SalesPage />,
-                path: '/sales'
-            }
-
-
-            
+                element:<SearchPage />,
+                path:'/search'
+            },
         ]
     }
 ]

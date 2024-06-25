@@ -1,34 +1,45 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-  }
-
-/* main page */
-.pagewrapper{
-  width: 100%;
-  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
 }
-  .mainpagediv{
-    display: flex;
-    flex-direction: column;
-    width: Fixed(1440px)px;
-    height: auto;
-  }
-/* MainPage section  first */
+
+/* Main Page */
+.pagewrapper{
+width: 100%;
+height: 100%;
+}
+.mainpagediv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+/* First Section */
+.firstsecbckg{
+  width: 100%;
+  min-height: 800px;
+  background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\1secGroup.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-bottom: 30px;
+ }
 
 .secfirstwrp{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: hug(1224px)px;
-  height: hug(400px)px;
+  width: 100%;
+  height:auto;
   top: 499px;
   left: 108px;
   border-radius: 10px ;
   opacity: 0px;  
+  
 }
 
 .sectionfirst {
@@ -36,292 +47,408 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1224px;
-  height: auto;
-  background-color: #E5FFC499;
-
-  }
-  .firstsecimgmain{
-    width: 288px;
-    height: 271px;  
-  }
-  .firstsecimgborder{
-    width: hug(1,224px)px;
-    height: 40px;
+  max-width: 1224px;
+  max-height: 577px;
+  border-radius: 20px;
+  border: 1px;  
+  gap: 32px ;
   }
 
   .firstsecitems{
     display: flex;
     flex-direction: column;
-    gap: 28px;
-    flex-wrap: wrap;
-    padding: 65px 0 151px 92px;
+    justify-content: center;
+    gap: 54px;
+    padding-bottom: 259px;
+    padding-top: 51px;
   }
 
-  .seconefirsttitle{
-    font-family: Helvetica Neue LT GEO;
-    font-size: 38px;
+  .titleone{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 39px;
     font-weight: 700;
-    line-height: 45.87px;
-    letter-spacing: 0.02em;
+    line-height: 55.52px;
+    letter-spacing: 0.04em;
     text-align: left;
-    color: #000000;
-    background: #FFFFFF;
-    padding: 10px;  
-    width: fit-content;  
-  }
-  .seconetwotitle{
-    width: 674px;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: Helvetica Neue LT GEO;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-    text-align: left;   
-    color: #000000; 
-    padding: 10px;
   }
 
-  /* second section */
+  .titletwo{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 38.97px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .firstsecimgmain{
+    max-width: 397.73px;
+    height: 530px;
+    border-radius: 10px;
+  }
+
+/* Second Section */
+
   .sectionsecondwrapper{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 56px;
   }
-  .sectionsecond {    
+
+  .secondsecbackgrwrp{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\sec2Vector.png');
+    background-repeat: no-repeat;
+    background-position: right ;
+  }
+  .secondtitlewrp{
     width: 1224px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 46px;
-    margin-top: 122px;
-    gap: 46px;
+    justify-content: flex-start;
+    align-items: center;
   }
   .secondtitle{
-    width: hug(1224px)px;
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    letter-spacing: 0.08em;
+    text-align: left; 
+
+  }
+
+  .sectionsecond{
+    max-width: 100%;
     height: auto;
     display: flex;
-    padding: 10px 1165px 10px 10px;
-    font-family: 'Helvetica Neue LT GEO', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 43.45px;
-    letter-spacing: 0.1em;
-    text-align: left;
-    text-decoration: none;
-    color: #000000;
+    flex-direction: column;
+    align-items: center;
   }
 
-
-  .spanstyle {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
-    gap: 5px;
-    margin-top: 12px;
-  }
-  .price {
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: left;
-  color: #051126;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.9px;
-  text-align: left;
-  }
-  
-  .sale {
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 16.9px;
-  text-align: left;
-  color: #EB000E;
-    
-  }
-
-  .cardtexts{
+  .mainpgbags{
     display: flex;
     flex-direction: column;
-    padding: 10px 21px ;
-    gap: 8px;
-    text-align: center;
-    margin-top: 10px;
-    color: #7dacca;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1224px;
+    height: auto;
+    gap: 56px;
+  }
+  .flexContainer{
+    max-width: 1224px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
   }
 
-  .cardtitles {
-    font-family:  'Helvetica Neue LT GEO', sans-serif;
+  .collectionscard{
+    width: 289px;
+    height: 358px;
+    top: 1214px;
+    left: 108px;
+    border-radius: 10px;
+    border: 1px solid #CFFFB8;
+    opacity: 0px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-decoration: none;
+  }
+
+  .spanstyle{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    padding: 12px 12px 4px 0px;
+  }
+
+  .pricecollect{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.62px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .colitemimgwrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 215px;
+    overflow: hidden;
+  }
+  
+  .collitemimages {
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover; /* Ensure images cover the entire container while maintaining aspect ratio */
+  }
+
+  .collcardtexts{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 174px 15px 26px ;
+    gap: 8px;
+    width: 100%;
+  }
+  .collcardtitles{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.73px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #000000;
+  }
+  .collsizetitles{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.9px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #878787;
+  }
+  .collecsecbtnwrp{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 56px;
+  }
+
+  .collecsecbtn{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    width: 263px;
+    height: 24px;
+  }
+
+  .collectbtnmore{
+    font-family: Helvetica Neue LT GEO;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.14px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #000000;
+    border: 0px;
+    cursor: pointer;
+  }
+
+  .collecbutton{
+    width: 11.78px;
+    height: 20px;
+    top: 2px;
+    border: 0px;
+    cursor: pointer;
+  }
+
+  /* Custom design section */
+  .customDesignSectionswrapper{
+    width: 100%;
+    height: 862px;
+    display: flex;
+    justify-content: center;
+    background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\Untitled-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .customDesignSections{
+    display: flex;
+    flex-direction: column;
+    max-width: 1224px;
+    max-height: 554px;
+    gap: 0px;
+    background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\s650898027556343822_p11_i8_w948-removebg-preview 1.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto;
+    background-color: #E8EAF2;
+  }
+
+  .captionDesign{
+    max-width: 1224px;
+    height: auto;
+    display: flex;
+    text-decoration: none;
+  }
+  .captionDesigntitle{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 55.52px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #000000;
+    padding: 32px 418px 53px 419px ;
+  }
+
+  .mbudescribtextwrp{
+    max-width: 710px;
+    max-height: 176px;
+    padding: 53px 0px 300px 35px;
+    border-radius: 10px;
+  }
+
+  .mbudescribtext{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.62px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    text-align: left;
+  }
+
+  /* Sales Bags */
+  .salesbagssection{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .salescard{
+    width: 288px;
+    height: 287px;
+    top: 2481px;
+    left: 108px;
+    gap: 0px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .salesitemimageswrp{
+    width: 288px;
+    height: 215px;
+    display: flex;
+    justify-content: center;    
+  }
+
+  .salepercwrp{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding-left: 25px;
+  }
+  .saleperc{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    letter-spacing: 0.04em;
+    text-align: left;       
+    padding: 5px 8px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    background-color: #E32B39;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin-right: 0px;
+    position: absolute;
+  }
+
+  .salesspanprice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 49px;
+    padding-top: 18px;
+  }
+
+  .salespricenew{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
     font-size: 28px;
     font-weight: 700;
     line-height: 33.8px;
-    letter-spacing: 0.01em;
-    text-align: left;   
-    color: #000000;
- 
-  }
-  .pricetitles {
-    font-family: 'Helvetica Neue LT GEO', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48.28px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.04em;
     text-align: left;
+    color: #3E1212;
+  }
+  .salespriceold{
+    font-family: 'Helvetica Neue LT GEO', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.8px;
+    letter-spacing: 0.04em;
+    text-align: left;    
     color: #000000;
+    text-decoration: line-through;
   }
 
-  .sizetitles{
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.73px;
-  text-align: left;
-  color: #555555;
-}
-
-  .more{
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.73px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  color: #000000;
-  padding: 5px;
-  cursor: pointer;
-  border: 1px solid #00000033;
-  border-radius: 50px;
-  opacity: 80%;
-  background-color: #FFFFFF;
-  }
+  @media (max-width: 1100px) {
+    .mainpagediv {
+      width: 100%;
+    }
+    
+    .sectionfirst {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 400px; 
+    }
+    .firstsecitems{
+      padding-bottom: 20px;
+    }
+    .titleone,
+    .titletwo{
+      text-align: center;
+    }
+    .secondtitlewrp{
+      width: fit-content;
   
-.flexContainer {
-  width: 1224px;
-  height: auto;
-  display: flex;
-  /* flex-wrap: wrap;  */
-  justify-content: center;
-  align-items: center; 
-  gap: 20px; 
-  padding: 16px 108px ;
-  margin-bottom: 100px;
+    }
 
-}
-.cardd {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
-  width: 288px;
-  height: 433px;
-  top: 1104px;
-  left: 108px;
-  gap:8px ;
-  justify-content: center;
-  border-radius: 15px; 
-  opacity: 0px;
-  text-decoration: none;
-}
-.itemimages {
-  width: fit-content;
-  height: auto;
-  cursor: pointer;
-}
+    .mainpgbags{
+      flex-wrap: wrap;
+    }
+    .flexContainer{
+      display: flex;
+      flex-wrap: wrap;    
+    }
+    .collecsecbtnwrp{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .captionDesigntitle{
+      padding: 0;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 53px;
+    }
 
-
-.spanimages{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 55px;
-  width: auto;
-  height: auto;
-}
-.customDesignSectionswrapper{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.customDesignSections {
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  justify-content: center;
-  align-items: center;
-  /* padding: 26px 108px; */
-  /* gap: 98px; */
-  width: 1224px;
-  height:  464px;
-  background-image: url('./style/Rectangle 65.jpg');
-  background-size: cover;
-}
-
-.captionDesign{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 22px;
-  width: hug(1224px)px;
-}
-.mbuimagesboard{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: auto;
-  border-radius: 10px;
-  gap: 117px;
-}
-.captionDesigntitle {
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48.28px;
-  letter-spacing: 0.1em;
-  text-align: left; 
-  color: #000000;
-  background-color: #FFFFFF; 
-  padding: 10px;
-}
-.subtextDesign {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 16px;  
-  color: white;
-  padding: 10px;
-  border-radius: 8px;  
-  margin-top: 10px;  
-  line-height: 0; 
-}
-
-.customDesignImage {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+    .mbudescribtextwrp{
+      padding: 0;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
   }
-
-  .customDesignImagespan{
-    display: flex;
-    flex-wrap: wrap;
-    width: 288px;
-    height: 304px;
-    padding: 15px;
-  }
-  @media (max-width: 900px) {
-    .customDesignImage,
-    .spanimages {
-      width: 90%;
-    }}
-

@@ -2,7 +2,7 @@ import React from "react";
 import instaImg from '../style/instagram.png';
 import fbImg from '../style/facebook.png';
 import imgBarcode from '../style/barcode.png';
-import styles from '../headerfooterpgstyles.module.css';
+import styles from '../footerpgstyles.module.css';
 import { Link } from "react-router-dom";
 
 const FooterItems = [
@@ -12,8 +12,8 @@ const FooterItems = [
 ];
 
 const FooterParts = [
-  { id: 1, image: instaImg, link: 'https://bit.ly/3UynU89' },
   { id: 2, image: fbImg, link: 'https://bit.ly/3Uwu3Sv' },
+  { id: 1, image: instaImg, link: 'https://bit.ly/3UynU89' },
 ];
 
 const FooterAboutUs = [
@@ -44,17 +44,19 @@ const FooterList = () => {
       <div className={styles.aboutusfooter}>
         <div className={styles.footerPartOne}>
           <h5 className={styles.footeroneItemsP}>ჩვენ შესახებ</h5>
-          {FooterAboutUs.map(item => (
-            <div className={styles.footeroneItems} key={item.id}>
-              <Link className={styles.footerlinksptwo} to={item.link}>{item.title}</Link>
-            </div>
-          ))}
+          <div className={styles.footerone}>
+            {FooterAboutUs.map(item => (
+              <div className={styles.footeroneItems} key={item.id}>
+                <Link className={styles.footerlinksptwo} to={item.link}>{item.title}</Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       <div className={styles.footertwo}>
         <div className={styles.footerPartOne}>
-          <h5 className={styles.footeroneItemsP}>დაგვიმეგობრდით სოციალურ გვერდებზე:</h5>
+          <h5 className={styles.footeroneItemsP}>დაგვიმეგობრდით:</h5>
           <div className={styles.footericons}>
             {FooterParts.map(item => (
               <div key={item.id} >

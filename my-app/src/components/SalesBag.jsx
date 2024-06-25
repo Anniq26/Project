@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../collectionspgstyles.module.css';
+import styles from '../mainpgstyles.module.css';
 import { Link } from 'react-router-dom';
-import imgCardBorder from '../style/Rectangle 84.png';
-
+import imgLeftArrow from '../style/arrow_back_ios.png';
+import imgRightArrow from '../style/arrow_forward_ios.png';
 
 const SalesBag = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [startIndex, setStartIndex] = useState(4);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -36,38 +37,57 @@ const SalesBag = () => {
     if (error) return <p className={styles.error}>{error}</p>;
     if (!data || data.results.length === 0) return <p>No data available</p>;
 
-    const firstFourProducts = data.results.slice(4, 7);
+
+
+    const showNext = () => {
+        const nextIndex = Math.min(startIndex + 4, data.results.length + 4);
+        setStartIndex(nextIndex);
+    };
+
+    const showPrevious = () => {
+        const previousIndex = Math.max(startIndex - 4, 0);
+        setStartIndex(previousIndex);
+    };
+
+    const firstFourProducts = data.results.slice(startIndex, startIndex + 4);
+    const handleClick = (route) => {
+        window.open(route, '_self');
+    };
+
 
     return (
-    <div className={styles.salesflexContainer}>
+    <div className={styles.mainpgbags}>
+    <div className={styles.flexContainer}>
         {firstFourProducts.map(({ id, name, width, length, description, category, price, image_urls }) => (
-            <Link to={`/collections/bagdetail/${id}`}  className={styles.salescardwrp} key={id}>
-                <div className={styles.salescardwrp2}>
-                    <div className={styles.salescard}>
-                        <div className={styles.salesitemimageswrp} >
-                        <img className={styles.salesitemimages} src={image_urls[0].image} alt="img" />
-                        </div>
-                        <div className={styles.salestexts}>
-                            <h2  className={styles.saleperc}>-30%</h2>  
-                            <div className={styles.salestextspt2}>
-                                <span className={styles.salesspanprice}>
-                                    <h4 className={styles.pricenew}>{Math.floor(parseFloat(price))}₾</h4>
-                                    <h4 className={styles.priceold}>115₾</h4>
-                                </span>
-                                <div className={styles.salescardtexts}>
-                                    <h3 className={styles.salessizetitles}> {name}</h3>
-                                    <p className={styles.salessizetitles}>{Math.floor(parseFloat(width))}X{Math.floor(parseFloat(length))}</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    <div className={styles.salesimgborderwrp}>
-                            <img src={imgCardBorder} alt="img" className={styles.salesimgborder}/>
-                    </div>
+            <Link to={`/collections/bagdetail/${id}`}  className={styles.salescard} key={id}>
+                <div className={styles.salepercwrp}>
+                    <h2  className={styles.saleperc}>-20%</h2> 
+                </div> 
+                <div className={styles.salesitemimageswrp} >
+                    <img className={styles.collitemimages} src={image_urls[0].image} alt="img" />
+                </div>
+                <div className={styles.salestexts}>
+                    <span className={styles.salesspanprice}>
+                        <h4 className={styles.salespricenew}>{Math.floor(parseFloat(price))}₾</h4>
+                        <h4 className={styles.salespriceold}>75₾</h4>
+                    </span>
                 </div>
             </Link>
         ))}
+    </div>
+    <div className={styles.collecsecbtnwrp}>
+            <div className={styles.collecsecbtn}>
+                <button onClick={() => handleClick('/collections/offers')} className={styles.collectbtnmore}>
+                    ყველას ნახვა 
+                </button>
+                <button className={styles.collecbutton} onClick={showPrevious}>
+                    <img className={styles.collecsecbtnimg} src={imgLeftArrow} alt="img" />
+                </button>
+                <button className={styles.collecbutton} onClick={showNext}>
+                    <img className={styles.collecsecbtnimg} src={imgRightArrow} alt="img" />
+                </button>
+            </div>
+        </div>
     </div>
     );
 };

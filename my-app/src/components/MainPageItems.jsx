@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../mainpgstyles.module.css';
 import { Link } from 'react-router-dom';
+import imgLeftArrow from '../style/arrow_back_ios.png';
+import imgRightArrow from '../style/arrow_forward_ios.png';
+
 
 const MainPageItems = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [startIndex, setStartIndex] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -35,24 +39,54 @@ const MainPageItems = () => {
     if (!data || data.results.length === 0) return <p>No data available</p>;
 
     // Extract the first four products
-    const firstFourProducts = data.results.slice(0, 4);
+
+    const showNext = () => {
+        const nextIndex = Math.min(startIndex + 4, data.results.length - 4);
+        setStartIndex(nextIndex);
+    };
+
+    const showPrevious = () => {
+        const previousIndex = Math.max(startIndex - 4, 0);
+        setStartIndex(previousIndex);
+    };
+
+    const currentProducts = data.results.slice(startIndex, startIndex + 4);
+    const handleClick = (route) => {
+        window.open(route, '_self');
+    };
 
     return (
+    <div className={styles.mainpgbags}>
         <div className={styles.flexContainer}>
-            {firstFourProducts.map(({ id, name, width, length, description, category, price, image_urls }) => (
-               <Link to={`/collections/bagdetail/${id}`}  className={styles.cardd} key={id}>
+            {currentProducts.map(({ id, name, width, length, description, category, price, old_price, image_urls }) => (
+                <Link to={`/collections/bagdetail/${id}`} className={styles.collectionscard} key={id}>
                     <span className={styles.spanstyle}>
-                        <h4 className={styles.pricetitles}>{Math.floor(parseFloat(price))}₾</h4>
+                        <h4 className={styles.pricecollect}>{Math.floor(parseFloat(price))}₾</h4>
                     </span>
-                    <img className={styles.itemimages}  src={image_urls[0].image} alt="img" />
-                    <div className={styles.cardtexts}>
-                        <h3 className={styles.cardtitles}> {name}</h3>
-                        <h4 className={styles.sizetitles}>ტილო{Math.floor(parseFloat(width))}X{Math.floor(parseFloat(length))}</h4>
-
+                    <div className={styles.colitemimgwrp}>
+                        <img className={styles.collitemimages} src={image_urls[0].image} alt="img" />
+                    </div>
+                    <div className={styles.collcardtexts}>
+                        <h3 className={styles.collcardtitles}>{name}</h3>
+                        <h4 className={styles.collsizetitles}>{Math.floor(parseFloat(width))} X {Math.floor(parseFloat(length))}</h4>
                     </div>
                 </Link>
             ))}
         </div>
+        <div className={styles.collecsecbtnwrp}>
+            <div className={styles.collecsecbtn}>
+                <button onClick={() => handleClick('/collections')} className={styles.collectbtnmore}>
+                    ყველას ნახვა 
+                </button>
+                <button className={styles.collecbutton} onClick={showPrevious}>
+                    <img className={styles.collecsecbtnimg} src={imgLeftArrow} alt="img" />
+                </button>
+                <button className={styles.collecbutton} onClick={showNext}>
+                    <img className={styles.collecsecbtnimg} src={imgRightArrow} alt="img" />
+                </button>
+            </div>
+        </div>
+    </div>
     );
 };
 
