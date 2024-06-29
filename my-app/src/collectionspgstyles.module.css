@@ -1,245 +1,28 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-  }
-
-.messagescont {
-  display: flex;
-  justify-content: flex-end;
-  width: fit-content;
-  z-index: 1000;
-  position: fixed;
-  bottom: auto;
-  top: 644px;
-  padding-right: 26px;
-  right: 0;
-}
-.messages {
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-}
-@media (max-width: 900px) {
-  .messagescont, 
-  .messages {
-    display: none;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  
 }
 
-/* page orient */
-
-.pageorient{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: fit-content;
-  gap: 14px;
-  margin-left: 250px;
-  padding: 28px 456px 35px 108px ;
-}
-.madebyuplink{ 
-  font-family: Helvetica Neue LT GEO;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14.48px;
-  text-align: left;
-  color: #00000099;
-  text-decoration: none;
-}
-.madebyuplink:focus{
- color: #000000;
-}
-/* collectionspage */
-
-.collectionssecone{
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 55px;
-}
-
-
-.collectionspage{
-  display: flex;
-  justify-content: center;
+.collectionspage{ 
   width: 100%;
   height: auto;
-  gap: 24px;
-}
-
-.collectionsbags {
-  display: flex;
-  width: 960px;
-  height: 1056px;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.collectionscard { 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
-  width: 288px;
-  height: 433px;
-  top: 1104px;
-  left: 108px;
-  gap:8px ;
-  justify-content: center;
-  border-radius: 15px; 
-  opacity: 0px;
-  text-decoration: none;
-}
-
-.collecsecbtn{
-  display: flex;
-  justify-content: flex-end;
-  width: Hug (146px)px;
-  height: Hug (24px)px;
-  top: 1338px;
-  left: 1186px;
-  gap: 27px;
-  opacity: 0px;
-
-}
-
-.collecsecbtnimg{
-  background: none;
-  cursor: pointer;
-  border-radius: 0px;
-  width: fit-content;
-  height: fit-content;
-}
-.collecbutton{
-  background-color: #FFFFFF;
-  border: 0px;
-}
-
-.spanstyle {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
-  gap: 5px;
-  margin-top: 12px;
-}
-.price {
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48.28px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  color: #000000;
-}
-
-.sale {
-font-family: Helvetica Neue LT GEO;
-font-size: 14px;
-font-weight: 300;
-line-height: 16.9px;
-text-align: left;
-color: #EB000E;
-  
-}
-
-.cardtexts{
-  display: flex;
-  flex-direction: column;
-  padding: 10px 21px ;
-  gap: 8px;
-  text-align: center;
-  margin-top: 10px;
-  color: #7dacca;
-  width: 100%;
-}
-
-.cardtitles {
-  font-family:  'Helvetica Neue LT GEO', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 33.8px;
-  letter-spacing: 0.01em;
-  text-align: left;   
-  color: #000000;
-}
-
-
-.more{
-font-family: Helvetica Neue LT GEO;
-font-size: 18px;
-font-weight: 500;
-line-height: 21.73px;
-text-align: center;
-display: flex;
-align-items: center;
-margin: auto;
-color: #000000;
-padding: 5px;
-cursor: pointer;
-border: 1px solid #00000033;
-border-radius: 50px;
-opacity: 80%;
-background-color: #FFFFFF;
-}
-
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center; 
-  width: 936px; /* (3 * 288px) + (2 * 28px) = 936px */
-  height: auto;
-  gap: 28px; /* Gap between the items */
-  margin: 0 auto; /* Center the container horizontally */
+  background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\sec2Vector.png'),
+                    url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\Vector (6).png'),
+                    url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\vectorrr.png'),
+                    url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\Group (2).png');
+  background-position:  right top,
+                        left center,
+                        right center,
+                        left bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-.cardd {
-flex: 0 1 21%; 
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0 20px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-background: #F0F0F0;
-width: fixed(288px)px;
-height: fixed(433px)px;
-top: 265px;
-left: 420px;
-gap:8px ;
-justify-content: center;
-border-radius: 15px; 
-border: 1px solid #051126; 
-opacity: 0px;
-}
-.colitemimgwrp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 180px; /* Fixed width */
-  height: 240px; /* Fixed height */
-  overflow: hidden; /* Hide overflow to ensure all images fit within the container */
-}
-
-.itemimages {
-  height: 100%;
-  cursor: pointer;
-  object-fit: cover; /* Ensure images cover the entire container while maintaining aspect ratio */
-}
-
-.spanimages{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-margin-top: 55px;
-width: auto;
-height: auto;
-}
-
+/* filter  */
 .filter {
   display: flex;
   flex-direction: column;
@@ -250,6 +33,21 @@ height: auto;
   align-items: center;
 }
 
+.allfilterstitle{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 21.73px;
+  text-align: left;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  }
+
+ /* clear filter */
+ 
 .clearFilter {
   width: 288px;
   height: 42px;
@@ -261,249 +59,251 @@ height: auto;
   border: 1px solid #051126;
   opacity: 0px;
   cursor: pointer;
-}
+  }
 
 .clearfilterP{
-font-family: Helvetica Neue LT GEO;
-font-size: 18px;
-font-weight: 400;
-line-height: 21.73px;
-
-}
-
-
-.allfilterstitle{
-font-family: Helvetica Neue LT GEO;
-font-size: 18px;
-font-weight: 400;
-line-height: 21.73px;
-display: flex;
-width: 100%;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 46px;
-}
-
-/* offerspage */
-
-.offerspagewraper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  flex-wrap: wrap;
-}
-.mainsectionone {
-background: radial-gradient(ellipse at center, #5B9BBE 35%, #2A4858 70%);
-display: flex;
-flex-wrap: wrap;
-width: 100%;
-height: auto;
-justify-content: center;
-top: 256px;
-left: -1px;
-padding: 60px 108px;
-gap: 39px;
-margin-bottom: 68px;
-}
-.mainseconep{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 897px;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.mainseconeheading{
-flex-wrap: wrap;
-display: flex;
-font-family: Helvetica Neue LT GEO;
-font-size: 54px;
-font-weight: 500;
-line-height: 65.18px;
-text-align: left;
-color: #FFFFFF;
-padding: 10px;
-}
-
-.mainseconeheadingtwo{
-  display: flex;
-  flex-wrap: wrap;
-  font-family: Helvetica Neue LT GEO;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14.48px;
-  text-align: left;
-  color: #FFFFFF;
-  padding: 10px;
-  
-}
-.mainseconeimg{
-width: 288px;
-height: 290.93px;
-top: 60px;
-left: 1044px;
-gap: 0px;
-opacity: 0px;
-}
-
-
-/* sales */
-
-.sizetitles{
   font-family: 'Helvetica Neue LT GEO', sans-serif;
   font-size: 18px;
-  font-weight: 500;
-  line-height: 21.73px;
-  text-align: left;
-  color: #555555;
-}
+  font-weight: 400;
+  line-height: 21.73px; 
+  color: #051126E5;
+  }
+  
 
-/* sales */
-.salescardwrp2{
+/* bags sections */
+.collectionpgbags{
   display: flex;
   flex-direction: column;
-  width: 391px;
-  height: 315px;
-  border-radius: 10px;
-  opacity: 0px;
-  background-color: #D9D9D9; 
+  justify-content: center;
+  align-items: center;
+  max-width: 1224px;
+  height: auto;
+  gap: 56px;  
 }
 
-.salescard {
+.flexContainer{
+  max-width: 1224px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  
+}
+
+.collectionscard{
+  width: 289px;
+  height: 358px;
+  top: 1214px;
+  left: 108px;
+  border-radius: 10px;
+  border: 1px solid #CFFFB8;
+  opacity: 0px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-decoration: none;
+}
+
+.spanstyle{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  padding: 12px 12px 4px 0px;
+}
+
+.pricecollect{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.62px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.colitemimgwrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 288px;
+  height: 215px;
+  overflow: hidden;
+}
+
+.collitemimages {
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover; 
+}
+
+.collcardtexts{
+  display: flex;
+  flex-direction: column;
+  padding: 15px 174px 15px 26px ;
+  gap: 8px;
+  width: 100%;
+}
+
+.collcardtitles{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.73px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+}
+
+.collsizetitles{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.9px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #878787;
+}
+
+.collecsecbtnwrp{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 56px;
+  align-items: center;
+}
+
+.collecsecbtn{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 391px;
-  height: 298px;
-  top: 2355px;
-  left: 109px;
-  gap: 45px;
+  gap: 35px;
+  width: 263px;
+  height: 24px;
 }
 
-.salessizetitles{
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  color: #555555;
-}
-.priceold{
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 22px;
+.collectbtnmore{
+  font-family: Helvetica Neue LT GEO;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 26.55px;
-  letter-spacing: 0.1em;
+  line-height: 24.14px;
+  letter-spacing: 0.02em;
   text-align: left;
   color: #000000;
-  text-decoration: line-through;
-}
-
-.pricenew{
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 26.55px;
-  letter-spacing: 0.1em;
-  text-align: left;
-  color: #000000;
-}
-
-.salestexts{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: hug(174px)px;
-  height: hug(315px)px;
-  margin-left: 40px;
-  gap: 36px;
-  padding-top: 24px;
-}
-
-.salestextspt2{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 142px;
-  height: 99px;
-  top: 2467px;
-  left: 326px;
-  opacity: 0px;
-}
-
-.salesspanprice{
-  display: flex;
-  flex-direction: row;
-  width: 142px;
-  height: 99px;
-  gap: 12px;
-}
-
-.salesflexContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  width: auto;
-  height: auto;
-  gap: 28px;
-  
-}
-
-.salesitemimageswrp{
-  display: flex;
-  width: 175px;
-  height: 207.07px;  
+  border: 0px;
   cursor: pointer;
 }
-.salesitemimages{
-  width: fit-content;
-  height: auto;
+
+.collecbutton{
+  width: 11.78px;
+  height: 20px;
+  top: 2px;
+  border: 0px;
+  cursor: pointer;
 }
 
-.saleperc{
-  font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48.28px;
-  letter-spacing: 0.1em;
-  text-align: left;
-  padding:  4px 11px;
-  color: #FFFFFF;
-  background-color: #E32B39;
-  text-decoration: none;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  margin-right: 0px;
-}
+/* Offers Page */
 
-.salescardwrp{
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  
-}
-.salescardtexts{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: left;
-  color: #7dacca;
-}
-.salesimgborderwrp{
-  display: flex;
-  align-items: flex-end;
-  width: 391px;
-  height: auto;
-}
-.salesimgborder{
+.customDesignSectionswrapper{
   width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.customDesignSections{
+  display: flex;
+  flex-direction: column;
+  max-width: 1224px;
+  max-height: 450px;
+  gap: 0px;
+  background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\s650898027556343822_p11_i8_w948-removebg-preview 1.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto;
+  background-color: #E8EAF2;
+  padding-bottom: 45px;
+  margin-bottom: 45px;
+  border-radius: 20px;
+}
+
+.captionDesign{
+  max-width: 1224px;
   height: auto;
   display: flex;
-  align-items: flex-end;
+  text-decoration: none;
+}
+
+.captionDesigntitle{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 55.52px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #000000;
+  padding: 32px 418px 53px 419px ;
+}
+
+.mbudescribtextwrp{
+  max-width: 650px;
+  max-height: 176px;
+  padding: 0px 0px 15px 55px;
+  border-radius: 10px;
+}
+
+.mbudescribtext{
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.62px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  /* text-align: left; */
+}
+
+@media (max-width: 1100px) {
+  .collectionspage{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 250px;
+
+  }
+  .flexContainer{
+    display: flex;
+    flex-wrap: wrap;    
+  }
+  .collecsecbtnwrp{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .captionDesigntitle{
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 53px;
+  }
+  .mbudescribtextwrp{
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+
 }

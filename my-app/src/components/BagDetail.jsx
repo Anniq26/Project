@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import styles from '../bagdetailspg.module.css';
-import imgArr from '../style/arr.png';
-import imgLeftArrow from '../style/arrowleft.png';
-import imgRigtArrow from '../style/arrowright.png';
+import imgLeftArrow from '../style/arrow_back_ios.png';
+import imgRightArrow from '../style/arrow_forward_ios.png';
 
 const BagDetail = () => {
   const { id } = useParams();
@@ -71,67 +70,79 @@ const BagDetail = () => {
 
   return (
     <div className={styles.bagdetail}>
-      <div className={styles.pageorient}>
-        <Link className={styles.madebyuplink} to={'/main'}>მთავარი</Link>
-        <img className={styles.collecsecbtnimg} src={imgArr} alt="img" />
-        <Link className={styles.madebyuplink} to={'/collections'}>ჩანთების კოლექცია</Link>
-        <img className={styles.collecsecbtnimg} src={imgArr} alt="img" />
-        <Link className={styles.madebyuplink} to={`/collections/bagdetail/${id}`}>ჩანთა</Link>
-      </div>
+      <div className={styles.bagdetailpgwrapper}>
       <div className={styles.maincontentwrp}>
+
         <div className={styles.imgarray}>
           {bag.image_urls && bag.image_urls.map((image, index) => (
-            <img key={index} src={image.image} alt={`img-${index}`} />
+            <div className={styles.arryitemwrapper}>
+              <img className={styles.imgarryitem} key={index} src={image.image} alt={`img-${index}`} />
+            </div>
           ))}
         </div>
         <div className={styles.imgdetailmainwrp}>
-          {bag.image_urls && bag.image_urls[0] && <img className={styles.imgdetailmain} src={bag.image_urls[0].image} alt="img" />}
+          {bag.image_urls && bag.image_urls[0] && 
+            <img className={styles.imgdetailmain} src={bag.image_urls[0].image} alt="img" />
+          }
         </div>
+
         <div>
           <div className={styles.baginfo}>
             <div className={styles.maintitle}>
               <h2 className={styles.maintitleh2}>{bag.name}</h2>
-              <h3 className={styles.maintitleprice}>{bag.price}₾</h3>
+              <h3 className={styles.maintitleprice}>{Math.floor(parseFloat(bag.price))}₾</h3>
             </div>
             {bag.description !== "no description" && (
             <p className={styles.mainbaginfo}>{bag.description}</p>
             )}
+            
             <div>
-              {/* <h6 className={styles.mainbaginfoh6}>ფერი: {bag.color}</h6>
-              <h6 className={styles.mainbaginfoh6}>მასალა: {bag.material}</h6> */}
-              <h6 className={styles.mainbaginfoh6}>ზომა: {bag.width} x {bag.length}</h6>
+              <h6 className={styles.mainbaginfoh6}> ჩანთის ზომა: {Math.floor(parseFloat(bag.width))} x {Math.floor(parseFloat(bag.length))}</h6>
             </div>
           </div>
         </div>
+
       </div>
-      <div className={styles.baginfotitleall}>
-        <h3 className={styles.baginfoh3}>მსგავსი პროდუქცია</h3>
+
+    <div>
+      <div className={styles.secondtitlewrp}>
+        <h2 className={styles.secondtitle}>რჩევები შენთვის</h2>
+      </div>
+      <div className={styles.flexContainer}>
+        {displayedItems.map(({ id, name, width, length, description, category, price, image_urls }) => (
+          <Link to={`/collections/bagdetail/${id}`}  className={styles.collectionscard} key={id}>
+            <span className={styles.spanstyle}>
+              <h4 className={styles.pricecollect}>{Math.floor(parseFloat(price))}₾</h4>
+            </span>
+            <div className={styles.colitemimgwrp}>
+              <img className={styles.collitemimages} src={image_urls[0].image} alt="img" />
+            </div>
+            <div className={styles.collcardtexts}>
+              <h3 className={styles.collcardtitles}>{name}</h3>
+              <h4 className={styles.collsizetitles}>{Math.floor(parseFloat(width))} X {Math.floor(parseFloat(length))}</h4>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+    <div className={styles.collecsecbtnwrp}>
         <div className={styles.collecsecbtn}>
-          <p>ყველა</p>
+          <button className={styles.collectbtnmore} onClick={showPrevious}>
+            ყველას ნახვა
+          </button>
           <button className={styles.collecbutton} onClick={showPrevious}>
             <img className={styles.collecsecbtnimg} src={imgLeftArrow} alt="img" />
           </button>
           <button className={styles.collecbutton} onClick={showNext}>
-            <img className={styles.collecsecbtnimg} src={imgRigtArrow} alt="img" />
+            <img className={styles.collecsecbtnimg} src={imgRightArrow} alt="img" />
           </button>
         </div>
       </div>
-      <div className={styles.flexContainer}>
-      {displayedItems.map(({ id, name, width, length, description, category, price, image_urls }) => (
-  <Link to={`/collections/bagdetail/${id}`} className={styles.collectionscard} key={id}>
-    <img className={styles.itemimages} src={image_urls[0].image} alt="img" />
-    <div className={styles.cardtexts}>
-        <h3 className={styles.cardtitles}>სახელწოდება: {name}</h3>
-        <h4 className={styles.cardtitles}>ჩანთის ზომა: {width} x {length}</h4>
-        <span className={styles.spanstyle}>
-            <h4 className={styles.price}  style={{ color: id >= 7 && id <= 10 ? '#EB000E' : '' }}>{id >= 6 && id <= 10 ? 'ფასდაკლებით:' : 'ჩანთის ფასი:'}</h4>
-            <h4 className={styles.cardtitles} style={{ color: id >= 7 && id <= 10 ? '#EB000E' : '' }}>{Math.floor(parseFloat(price))}₾</h4>
-        </span>
-    </div>
-  </Link>
-))}
 
-      </div>
+  </div>
+
+
+  </div>
     </div>
   );
 };

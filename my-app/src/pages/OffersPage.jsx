@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import { Link,  } from 'react-router-dom';
 import styles from '../collectionspgstyles.module.css';
 import CollectionsPageBags from '../components/CollectionsPageBags';
-import imgLeftArrow from '../style/arrowleft.png';
-import imgRigtArrow from '../style/arrowright.png';
-import imgArr from '../style/arr.png';
 import imgFilter from '../style/tune.png'
 import PriceFilter from '../components/PriceFilter';
 import ColorFilters from '../components/ColorFilter';
@@ -12,7 +8,7 @@ import TypeFilters from '../components/TypeFilters';
 import VisualFilters from '../components/VisualFilters';
 import ProductStatusFilter from '../components/ProductStatusFilter';
 import ClearFilter from '../components/ClearFilter';
-import Bagimg from '../style/offerspagebag.png'
+import { Link } from 'react-router-dom';
 
 
 const OffersPage = () => {
@@ -24,19 +20,17 @@ const OffersPage = () => {
 
   return ( 
       <div className={styles.offerspagewraper}>
-      <div className={styles.pageorient}>
-        <Link className={styles.madebyuplink} to={'/main'}>მთავარი</Link>
-        <img className={styles.collecsecbtnimg} src={imgArr} alt="img" />
-        <Link className={styles.madebyuplink} to={'/collections'}>ჩანთების კოლექცია</Link>
-        <img className={styles.collecsecbtnimg} src={imgArr} alt="img" />
-        <Link className={styles.madebyuplink} to={'/collections/offers'}>შეთავაზებები</Link>
-      </div>
-      <div className={styles.mainsectionone}>
-          <div className={styles.mainseconep}>
-            <h4 className={styles.mainseconeheading}>შეიძინე ერთი ჩანთა და მიიღე მეორეზე 10%-იანი ფასდაკლება!</h4>
-            <p className={styles.mainseconeheadingtwo}>იყავი განსაკუთრებული და ატარე განსაკუთრებული ჩანთა, განსაკუთრებული მოგონებებით</p>
+        <div className={styles.customDesignSectionswrapper}>
+          <div className={styles.customDesignSections}>
+              <Link to='/madebyu' className={styles.captionDesign}>
+                <h2 className={styles.captionDesigntitle}>შექმენი შენით!</h2> 
+              </Link>
+              <div className={styles.mbudescribtextwrp}>
+                <p className={styles.mbudescribtext}>შექმენი შენი სასურველი დიზაინით ჩანთა, 
+                  რომელიც დაკავშირეული იქნება შენს სურვილებთან, 
+                  მოგონებებთან და საყვარელ ადმიანებთან. </p>
+              </div>
           </div>
-          <img className={styles.mainseconeimg} src={Bagimg} alt="img" />
         </div> 
         <div className={styles.collectionspage}>
         <div className={styles.filter}>
@@ -51,11 +45,6 @@ const OffersPage = () => {
         <div className={styles.collectionssecone}>
           <div className={styles.collectionsbags}>
             <CollectionsPageBags/>
-          </div>
-          <div className={styles.collecsecbtn}>
-            <p>ყველა</p>
-            <button className={styles.collecbutton}><img  className={styles.collecsecbtnimg} src={imgLeftArrow} alt="img" /></button>
-            <button className={styles.collecbutton}><img  className={styles.collecsecbtnimg} src={imgRigtArrow} alt="img" /></button>
           </div>
         </div>
       </div>

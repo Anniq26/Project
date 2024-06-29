@@ -1,230 +1,349 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Helvetica Neue LT GEO', sans-serif; /* Assuming this is your primary font */
+}
 
-/* page orient */
-
-.pageorient{
+.bagdetail {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  width: fit-content;
-  gap: 14px;
-  margin-left: 250px;
-  padding: 28px 456px 35px 108px ;
 }
-.madebyuplink{ 
-  font-family: Helvetica Neue LT GEO;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14.48px;
-  text-align: left;
-  color: #00000099;
-  text-decoration: none;
-}
-.madebyuplink:focus{
- color: #000000;
-}
-/* bagdetail page */
-.bagdetail{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+.bagdetailpgwrapper {
+  max-width: 1224px;
   width: 100%;
-  height: auto;
-  gap: 117px;
 }
-.maincontentwrp{
+
+/* bag details */
+
+.maincontentwrp {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: auto;
   justify-content: center;
+  max-width: 1224px;
+  height: 600px;
   gap: 24px;
+  margin-bottom: 86px;
 }
-.imgarray{
+
+.imgarray {
   display: flex;
   flex-direction: column;
-  width: 184px;
-  height: auto;
+  max-width: 184px;
+  height: 600px;
   gap: 32px;
   margin-bottom: 53px;
 }
-.imgdetailmainwrp{
+
+.arryitemwrapper {
+  width: 160px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.imgarryitem {
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.imgdetailmainwrp {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 600px;
-  height: 600px;
-  top: 351px;
-  left: 316px;
-  gap: 24px;
-  background-color: #F0F0F0;
-  padding: 10px;
+  gap: 10px;
+  background-color: #f0f0f0;
+  padding: 45px 20px; /* Adjust padding as needed */
   border-radius: 15px;
 }
-.imgdetailmain {
-  width: 100%;
-  height: fit-content;
-  gap: 24px;
 
+.imgdetailmain {
+  width: 600px; /* Fixed width of the container */
+  height: 600px; /* Fixed height of the container */
+  object-fit: contain; /* Maintain aspect ratio; entire image is visible, scaled down if necessary */
+
+  /* Additional styles to center the image */
+  display: block; /* Ensures the image behaves like a block element */
+  margin: auto; /* Centers the image horizontally within its container */
+  max-width: 100%; /* Ensures the image does not exceed the container's width */
+  max-height: 100%; /* Ensures the image does not exceed the container's height */
 }
-.baginfo{
+
+.baginfo {
   display: flex;
   flex-direction: column;
-  width: 392px;
-  height: auto;
-  gap: 15px;
+  align-items: flex-start;
+  max-width: 392px;
+  gap: 30px;
 }
+
 .maintitle {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
   gap: 65px;
-  width: auto;
-  height: auto;
+  max-width: 367px;
+  padding: 15px;
 }
-.maintitleh2{
-  font-family: Helvetica Neue LT GEO;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 31.38px;
+
+.maintitleh2 {
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 1.2;
   text-align: left;
   color: #000000;
 }
-.maintitleprice{
-  font-family: Helvetica Neue LT GEO;
+
+.maintitleprice {
   font-size: 30px;
-  font-weight: 600;
-  line-height: 36.21px;
+  font-weight: 900;
+  line-height: 1.2;
   text-align: left;
   color: #000000;
 }
-.mainbaginfo{
-  font-family: Helvetica Neue LT GEO;
+
+.mainbaginfo {
+  width: 352px;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.73px;
-  text-align: left;
+  line-height: 1.2;
+  text-align: justify;
   color: #000000;
+  padding: 15px;
 }
-.mainbaginfoh6{
-  display: flex;
-  flex-direction: column;
-  font-family: Helvetica Neue LT GEO;
+
+.mainbaginfoh6 {
   font-size: 18px;
   font-weight: 500;
-  line-height: 21.73px;
+  line-height: 1.2;
+  text-align: left;
+  color: #000000;
+  padding: 15px;
+}
+
+/* similar products */
+
+.secondtitlewrp {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.secondtitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   text-align: left;
   color: #000000;
 }
 
-.baginfoh3{
-font-family: Helvetica Neue LT GEO;
-font-size: 14px;
-font-weight: 400;
-line-height: 16.9px;
-text-align: left;
-color: #000000;
-}
-.collecsecbtn{
+/* similar products cards */
+
+.flexContainer {
+  max-width: 1224px;
+  height: auto;
   display: flex;
-  justify-content: flex-end;
-  width: Hug (146px)px;
-  height: Hug (24px)px;
-  top: 1338px;
-  left: 1186px;
-  gap: 27px;
-  opacity: 0px;
-}
-.collecbutton{
-  background-color: #FFFFFF;
-  border: 0px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 44px;
 }
 
-.collecsecbtnimg{
-  background: none;
-  cursor: pointer;
-  border-radius: 0px;
-  width: fit-content;
-  height: fit-content;
-}
-.baginfotitleall{
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  gap: 922px;
-}
-.collectionscard { 
-  width: 288px; /* Adjusted width */
-  height: 320px;
-  padding: 5px 0;
-  border-radius: 15px;
-  border: 1px;
+
+
+.collectionscard {
+  width: 289px;
+  height: 358px;
+  border-radius: 10px;
+  border: 1px solid #cfffb8;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background: #F0F0F0; 
-  border: 1px solid #051126;
   text-decoration: none;
 }
-.flexContainer {
+
+.spanstyle {
   display: flex;
-  flex-wrap: wrap; 
+  justify-content: flex-end;
+  width: 100%;
+  padding: 12px 12px 4px 0px;
+}
+
+.pricecollect {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.colitemimgwrp {
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  width: 288px;
+  height: 215px;
+  overflow: hidden;
+}
+
+.collitemimages {
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.collcardtexts {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px; /* Adjust padding as needed */
+  gap: 8px;
+  width: 100%;
+}
+
+.collcardtitles {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+}
+
+.collsizetitles {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #878787;
+}
+
+/* button */
+.collecsecbtnwrp {
   width: 100%;
   height: auto;
-  gap: 20px; 
-  top: 779px;
-  padding: 16px 108px ;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 56px;
+  align-items: center;
+}
+
+.collecsecbtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; /* Adjust as needed */
+}
+
+.collectbtnmore {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+  border: 0px;
+  cursor: pointer;
+}
+
+.collecbutton {
+  width: 11.78px;
+  height: 20px;
+  border: 0px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .bagdetail {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  .itemimages {
-    width: Hug(288px);
-    height: 200px;
-    cursor: pointer;
-    }
-    .cardtexts{
-      display: flex;
-      flex-direction: column;
-      padding: 10px 21px ;
-      gap: 8px;
-      text-align: center;
-      margin-top: 10px;
-      color: #7dacca;
-    
-    }
-    .cardtitles {
-      font-family: Helvetica Neue LT GEO;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 16.9px;
-      text-align: left;
-      color: #051126;
-      }
-      .spanstyle {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-      }
-      .price {
-        font-family: Helvetica Neue LT GEO;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 16px;
-        text-align: left;
-        color: #051126;
-        font-family: Helvetica Neue LT GEO;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16.9px;
-        text-align: left;
-        }          
+  .bagdetailpgwrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+  .flexContainer {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 44px;
+  }
+
+  .maincontentwrp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 86px;
+  }
+  .imgdetailmainwrp {
+    max-width: 100%;
+    max-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensure items center on wrap */
+    padding: 45px 20px; /* Adjust padding as needed */
+  }
+  .baginfo {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mainbaginfo {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flexContainer {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 44px;
+  }
+  .collecsecbtnwrp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+}

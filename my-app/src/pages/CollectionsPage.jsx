@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from '../collectionspgstyles.module.css';
 import CollectionsPageBags from '../components/CollectionsPageBags';
-import imgArr from '../style/arr.png';
 import imgFilter from '../style/tune.png';
 import PriceFilter from '../components/PriceFilter';
 import ColorFilters from '../components/ColorFilter';
@@ -59,13 +57,6 @@ const CollectionsPage = () => {
   };
 
   return (
-    <div>
-      <div className={styles.pageorient}>
-        <Link className={styles.madebyuplink} to={'/main'}>მთავარი</Link>
-        <img className={styles.collecsecbtnimg} src={imgArr} alt="img" />
-        <Link className={styles.madebyuplink} to={'/collections'}>ჩანთების კოლექცია</Link>
-      </div>
-
       <div className={styles.collectionspage}>
         <div className={styles.filter}>
           <h5 className={styles.allfilterstitle}>მოძებნე უფრო მარტივად <img src={imgFilter} alt='img'/></h5>
@@ -86,8 +77,6 @@ const CollectionsPage = () => {
               productStatus={productStatus} 
             />
           </div>
-         
-        </div>
       </div>
     </div>
   );

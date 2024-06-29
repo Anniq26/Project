@@ -16,7 +16,7 @@ const VisualFilters = () => {
     
     return (
         <div className={styles.typefilterwrp}>        
-            <h6 className={styles.filtertitle}>ჩანთის სახეობა</h6>
+            <h6 className={styles.filtertitle}>გაფორმება</h6>
             <div className={styles.typeFilterContainer}>
                 {types.map((type, index) => (
                     <div key={index} className={styles.typeItem}>

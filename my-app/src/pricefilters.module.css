@@ -43,16 +43,16 @@
 .pricefilterrange{
 display: flex;
 justify-content: center;
-font-family: Helvetica Neue LT GEO;
+font-family: 'Helvetica Neue LT GEO', sans-serif;
 font-size: 14px;
 font-weight: 400;
 line-height: 16.9px;
 text-align: left;
-color: #FCCA46CC;
+color: #000000;
 }
 
 .sliderlabel {
-font-family: Helvetica Neue LT GEO;
+font-family: 'Helvetica Neue LT GEO', sans-serif;
 font-size: 18px;
 font-weight: 400;
 line-height: 21.73px;

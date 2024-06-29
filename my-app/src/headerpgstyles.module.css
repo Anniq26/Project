@@ -7,7 +7,7 @@
 /* Header Frame*/
 .headerFramewrapper{
   width: 100%;
-  height: auto;
+  max-height: 60px;
 }
 .headerFrame {
   display: flex;
@@ -93,6 +93,7 @@
 .logowrapper{
   display: flex;
   width: 100%;
+  height: fit-content;
   justify-content: center;
 }
 .searhbuttoncontainer{
@@ -175,9 +176,42 @@
 }  
 
 @media (max-width: 1000px) {
+  .headerFramewrapper{
+    width: 100%;
+    max-height: auto;
+    margin-bottom: 0px;
+  }
   .pageslinks{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+  .headerwrappr{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 205px;
+  }
+  
+  .logowrapper{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    padding: 50px;
+  }
+  .headercontainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+}
+@media (max-width: 700px) {
+  .headercontainer {
+   background-image: none;
+  }
+
 }

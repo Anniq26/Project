@@ -403,17 +403,44 @@ height: 100%;
     }
     
     .sectionfirst {
+      margin-top: 275px;
       display: flex;
       flex-wrap: wrap;
+      width: auto;
+      height: auto;
       margin-bottom: 400px; 
     }
     .firstsecitems{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: auto;
+      height: auto;
       padding-bottom: 20px;
     }
-    .titleone,
-    .titletwo{
+    .titleone{
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
       text-align: center;
+      font-family: 'Helvetica Neue LT GEO', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 55.52px;
     }
+    .titletwo{
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
+    }
+
+    .firstsecimgmain{
+      width: 100%;
+      height: auto;
+    }
+
+
     .secondtitlewrp{
       width: fit-content;
   
