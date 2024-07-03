@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../contactsxaboutuspgstyles.module.css';
 import imgContact from '../style/contactimg.png';
-import imgArr from '../style/arr.png';
 
 
 
@@ -11,8 +10,8 @@ const ContactPage = () => {
   const contactInfo = [
     { title: 'ტელეფონი:', content: '+995 574 08 54 13', link: 'tel:+995574085413' },
     { title: 'მისამართი:', content: 'ჩხოროწყუ, მუხური.', link: 'https://bit.ly/4bfqju5' },
-    { title: 'Gmail:', content: 'Qina@gmsil.com', link: 'mailto:Qina@gmsil.com' },
-    {content: 'ნებისმერ დროს დაგვიკავშირდით თქვენთვის სასურველ პლატფორმაზე, ჩვენ მალე გიპასუხებთ.' }
+    { title: 'Gmail:', content: 'Qina@gmail.com', link: 'mailto:Qina@gmail.com' },
+    {title: 'ნებისმერ დროს დაგვიკავშირდით თქვენთვის სასურველ პლატფორმაზე, ჩვენ მალე გიპასუხებთ.' }
   ];
 
   const qinaInfo = [
@@ -21,19 +20,15 @@ const ContactPage = () => {
   ] 
   return (
     <div className={styles.contactspage}>
-      <div className={styles.pageorient}>
-        <Link className={styles.contactsplink} to={'/main'}>მთავარი</Link>
-        <img className={styles.collecsecbtnimg} src={imgArr} alt="img" />
-        <Link className={styles.contactsplink} to={'/contact'}>კონტაქტი</Link>
-      </div>
       <div className={styles.contactspagewrp}>
         <div className={styles.contactspicturewrapper}>
           <img className={styles.contactspicture} src={imgContact} alt="img" />
         </div>
         <div className={styles.contactstext}>
+          <h2 className={styles.contactmaintitle}>კონტაქტი:</h2>
           {contactInfo.map(({ title, content, link }) => (
             <div key={title} className={styles.contentwrapper}>
-              <h2 className={styles.contacttitle}>{title}</h2>
+              <h3 className={styles.contacttitle}>{title}</h3>
               <div className={styles.infowrapper}>
                 {link ? (
                   <p className={styles.phonenmb}>
@@ -49,8 +44,8 @@ const ContactPage = () => {
           ))}
       
         {qinaInfo.map(({ title, content}) => (
-          <div className={styles.contentwrapper}>
-            <h2 className={styles.contacttitle}>{title}</h2>
+          <div className={styles.contentwrapperabout}>
+            <h2 className={styles.titleabout}>{title}</h2>
             <p className={styles.aboutustext}>{content}</p>
           </div>
         ))}

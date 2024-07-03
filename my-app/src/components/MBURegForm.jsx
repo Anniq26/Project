@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../madebyustyles.module.css';
-import imgEdit from '../style/border_color.png';
-import imgDel from '../style/delete.png';
-import { createEntry, readEntries, updateEntry, deleteEntry } from '../api';
+import { createEntry, readEntries, updateEntry, } from '../api';
 import { useNavigate } from 'react-router-dom'; 
 const MBURegForm = () => {
     const [formData, setFormData] = useState({
@@ -52,19 +50,7 @@ const MBURegForm = () => {
         }
     };
 
-    const handleDelete = async (id) => {
-        try {
-            await deleteEntry(id);
-            fetchEntries();
-        } catch (error) {
-            console.error('Failed to delete entry:', error);
-        }
-    };
 
-    const handleEdit = (index) => {
-        setEditIndex(index);
-        setFormData(entries[index]);
-    };
 
     return (
         <div>
@@ -112,7 +98,7 @@ const MBURegForm = () => {
                     </label>
                 </div>
                 <button className={styles.more} type="submit">
-                    {editIndex !== null ? 'განახლება' : 'რეგისტრაცია'}
+                    {editIndex !== null ? 'განახლება' : 'გაგზავნა'}
                 </button>
             </form>
             <div>
@@ -121,14 +107,6 @@ const MBURegForm = () => {
                         <span>{entry.fullName}</span>
                         <span>{entry.phoneNumber}</span>
                         <span>{entry.address}</span>
-                        <div className={styles.instrumentstext}>
-                            <button onClick={() => handleEdit(index)}>
-                                <img src={imgEdit} alt="edit" />
-                            </button>
-                            <button onClick={() => handleDelete(entry.id)}>
-                                <img src={imgDel} alt="delete" />
-                            </button>
-                        </div>
                     </div>
                 ))}
             </div>

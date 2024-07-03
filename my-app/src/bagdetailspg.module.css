@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Helvetica Neue LT GEO', sans-serif; /* Assuming this is your primary font */
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
 }
 
 .bagdetail {
@@ -13,6 +13,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: 
+  url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/Group (5).png'), 
+  url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/vectorrr1.png'), 
+  url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/vectorrr.png'), 
+  url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/Group (4).png');
+  background-position: 
+    top left, 
+    top right,
+    right center,
+    left bottom;
+  background-size: 
+    auto, 
+    auto, 
+    auto; 
+  background-repeat: no-repeat; 
+  margin-bottom: 56px;
 }
 
 .bagdetailpgwrapper {

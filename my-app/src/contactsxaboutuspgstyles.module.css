@@ -1,137 +1,159 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-  }
-
-/* contacts page */
-.contactspage{ 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
+.contactspage {
   width: 100%;
   height: auto;
-  margin-bottom: 135px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('C:\\Users\\Kitoshvili\\Desktop\\js project\\project\\my-app\\src\\style\\sec2Vector.png'),
+    url('C:\\Users\\Kitoshvili\\Desktop\\js project\\project\\my-app\\src\\style\\vectorrr.png');
+  background-position: right top,
+    right bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-bottom: 83px;
+  flex-wrap: wrap;
 }
-.pageorient{
+
+.contactspagewrp {
+  max-width: 1224px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-left: 250px;
-  padding: 28px 456px 35px 108px ;
-  width: 1224px;
+  justify-content: center;
+  gap: 23px;
+
 }
-.contactsplink{ 
-  font-family: Helvetica Neue LT GEO;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14.48px;
-  text-align: left;
-  color: #00000099;
-  text-decoration: none;
-}
-.contactsplink:focus{
- color: #000000;
-}
-.contactspagewrp {
+
+.contactspicturewrapper {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 1224px;
-  flex-direction: row;
-  gap: 128px;
-
-}
-.contentwrapper{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px 0;
+  border: 1px solid #00000066;
+  border-radius: 15px;
 }
 
-.infowrapper{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 10px 0;
-}
-
-.contactstext{
-  display: flex;
-  flex-direction: column;
-  width: 474px;
+.contactspicture {
+  width: 100%;
   height: auto;
-  left: 836px;
+  object-fit: contain;
+}
+
+.contactstext {
+  width: 100%;
+  max-width: 496px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 15px;
+}
+
+.contentwrapper {
+  display: flex;
+  flex-direction: row;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.contacttitle,
+.phonenmblink {
+  font-family: 'Helvetica Neue LT GEO', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.14px;
+  color: #000000;
+  text-decoration: none;
 }
 
 .contacttitle {
+  text-align: justify;
+}
+
+.contentwrapperabout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.titleabout {
   font-family: 'Helvetica Neue LT GEO', sans-serif;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 900;
   line-height: 26.55px;
   text-align: left;
   color: #000000;
-  height: auto;
 }
 
-.phonenmb {
-  flex-wrap: wrap;
-  font-family: Helvetica Neue LT GEO;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24.14px;
-  text-align: left;
-  color: #000000;
-}
-.phonenmbp{
-  display: flex;
-  flex-wrap: wrap;
-  width: 454px;
-  height: auto;
-  font-family: Helvetica Neue LT GEO;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.73px;
-  text-align: left;
-}
-.aboutustext{
-  display: flex;
-  justify-content: space-between;
-  text-align: justify;
-  width: 454px;
-  height: auto;
+.aboutustext {
   font-family: 'Helvetica Neue LT GEO', sans-serif;
   font-size: 18px;
-  font-weight: 900px;
+  font-weight: 700;
   line-height: 21.73px;
-}
-.phonenmblink{
-  text-decoration: none;
+  text-align: justify;
   color: #000000;
 }
-.contactspicture {
-  top: 275px;
-  left: 108px;
-  width: auto;
-  height: 100%;
+
+.aboutustitlemain{
+  font-family: 'Helvetica Neue LT GEO'sans-serif;
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 35.55px;
+  text-align: left;
+  color: #000000;
 }
 
-.contactspicturewrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #00000066;
-  width: 600px;
-  height: 600px;
-  border-radius: 15px;
+@media (max-width: 1100px) {
+  .contactspage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contactspagewrp {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+  }
+
+  .contactspicturewrapper {
+    width: 100%;
+    height: auto;
+    border: 1px solid #00000066;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contactspicture {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .contacttitle {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .contentwrapperabout,
+  .titleabout,
+  .aboutustext {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
 }
