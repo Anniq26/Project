@@ -1,6 +1,6 @@
 import React from "react";
 import styles from '../mainpgstyles.module.css';
-import imgMain from '../style/aboutus.png';
+import imgMain from '../style/mainpgpic.png';
 import CustomDesignSection from "../components/CustomDesignSection"; 
 import MainPageItems from "../components/MainPageItems";
 import SalesBag from "../components/SalesBag";

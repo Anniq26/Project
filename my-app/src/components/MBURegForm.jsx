@@ -1,60 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from '../madebyustyles.module.css';
-import { createEntry, readEntries, updateEntry, } from '../api';
-import { useNavigate } from 'react-router-dom'; 
-const MBURegForm = () => {
-    const [formData, setFormData] = useState({
-        fullName: '',
-        phoneNumber: '',
-        address: ''
-    });
-    const [entries, setEntries] = useState([]);
-    const [editIndex, setEditIndex] = useState(null);
-    const navigate = useNavigate(); // Initialize navigate
-    useEffect(() => {
-        fetchEntries();
-    }, []);
 
-    const fetchEntries = async () => {
-        try {
-            const data = await readEntries();
-            if (Array.isArray(data)) {
-                setEntries(data);
-            } else {
-                console.error('API response is not an array:', data);
-            }
-        } catch (error) {
-            console.error('Failed to fetch entries:', error);
-        }
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            if (editIndex !== null) {
-                await updateEntry(entries[editIndex].id, formData);
-            } else {
-                await createEntry(formData);
-            }
-            setFormData({ fullName: '', phoneNumber: '', address: '' });
-            setEditIndex(null);
-            fetchEntries();
-            navigate('/registered'); // Navigate to /registered route
-        } catch (error) {
-            console.error('Failed to submit form:', error);
-        }
-    };
-
-
-
+const MBURegForm = ({ formData, onFormDataChange, entries, setEditIndex }) => {
     return (
         <div>
-            <form onSubmit={handleSubmit} className={styles.txtinptwrp}>
+            <form className={styles.txtinptwrp}>
                 <div className={styles.regtext}>
                     <label htmlFor="fullName" className={styles.regtxtlabel}>
                         <input
@@ -63,7 +13,7 @@ const MBURegForm = () => {
                             id="fullName"
                             name="fullName"
                             value={formData.fullName}
-                            onChange={handleChange}
+                            onChange={onFormDataChange}
                             placeholder="სახელი და გვარი"
                             required
                         />
@@ -77,7 +27,7 @@ const MBURegForm = () => {
                             id="phoneNumber"
                             name="phoneNumber"
                             value={formData.phoneNumber}
-                            onChange={handleChange}
+                            onChange={onFormDataChange}
                             placeholder="ტელეფონის ნომერი"
                             required
                         />
@@ -91,15 +41,12 @@ const MBURegForm = () => {
                             id="address"
                             name="address"
                             value={formData.address}
-                            onChange={handleChange}
+                            onChange={onFormDataChange}
                             placeholder="მისამართი"
                             required
                         />
                     </label>
                 </div>
-                <button className={styles.more} type="submit">
-                    {editIndex !== null ? 'განახლება' : 'გაგზავნა'}
-                </button>
             </form>
             <div>
                 {Array.isArray(entries) && entries.map((entry, index) => (
