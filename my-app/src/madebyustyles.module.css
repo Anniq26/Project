@@ -12,9 +12,9 @@
   flex-direction: column;
   align-items: center;
   background-image: 
-    url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/sec2Vector.png'), 
-    url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/Group (5).png'), 
-    url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/vectorrr.png'); 
+  url('./style/sec2Vector.png'), 
+  url('./style/Group-5.png'), 
+  url('./style/vectorrr.png');
   background-position: 
     top right,
     top left, 
