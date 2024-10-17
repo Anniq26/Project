@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('./sec2Vector.png'),
-  url('./vectorrr.png');
+  background-image: 
+  url('./style/sec2Vector.png'),
+  url('./style/vectorrr.png');
+  
 
   background-position: right top,
     right bottom;

@@ -103,8 +103,7 @@ height: 100%;
     height: 110px;
     display: flex;
     justify-content: center;
-    background-image: url('./sec2Vector.png');
-    background-repeat: no-repeat;
+    background-image: url('./style/sec2Vector.png');    background-repeat: no-repeat;
     background-position: right ;
   }
   .secondtitlewrp{

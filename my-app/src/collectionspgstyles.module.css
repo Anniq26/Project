@@ -11,10 +11,11 @@
   flex-direction: row;
   justify-content: center;
   background-image: 
-  url('./sec2Vector.png'),
-  url('./Vector (6).png'),
-  url('./vectorrr.png'),
-  url('./Group (2).png');
+  url('./style/sec2Vector.png'),
+  url('./style/Vector (6).png'),
+  url('./style/vectorrr.png'),
+  url('./style/Group (2).png');
+  
 
   background-position:  right top,
                         left center,
