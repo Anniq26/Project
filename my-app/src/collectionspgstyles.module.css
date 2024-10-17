@@ -10,10 +10,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\sec2Vector.png'),
-                    url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\Vector (6).png'),
-                    url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\vectorrr.png'),
-                    url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\Group (2).png');
+  background-image: 
+  url('./sec2Vector.png'),
+  url('./Vector (6).png'),
+  url('./vectorrr.png'),
+  url('./Group (2).png');
+
   background-position:  right top,
                         left center,
                         right center,
