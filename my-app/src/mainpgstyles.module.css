@@ -22,7 +22,7 @@ height: 100%;
 .firstsecbckg{
   width: 100%;
   min-height: 800px;
-  background-image: url('C:\Users\Kitoshvili\Desktop\js project\project\my-app\src\style\1secGroup.png');
+  background-image: url('./style/1secGroup.png');
   background-repeat: no-repeat;
   background-position: left bottom;
   margin-bottom: 30px;

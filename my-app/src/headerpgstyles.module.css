@@ -54,8 +54,9 @@
   align-items: center;
   background-color: #f0f0f0; /* Fallback background color */
   background-image: 
-  url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/Group.png'), 
-  url('C:/Users/Kitoshvili/Desktop/js project/project/my-app/src/style/Vector.png');
+  url('./style/Group.png'), 
+  url('./style/Vector.png');
+
   background-position: 
     top left, 
     top right;
