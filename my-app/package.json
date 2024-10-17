@@ -30,8 +30,7 @@
       "react-app/jest"
     ]
   },
-"homepage": "https://anniq26.github.io/Project/",
-
+  "homepage": "https://anniq26.github.io/Project/",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -46,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.2.0",
     "http-proxy-middleware": "^3.0.0"
   }
 }
